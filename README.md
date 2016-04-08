@@ -46,4 +46,4 @@ If you reference the results of this paper, please also cite [the corpus](https:
 # Comments
 
 If you have comments or questions about anything, feel free to email christopher.ahern@gmail.com 
-or create an issue on github.
+or [create an issue](https://github.com/christopherahern/SEMPRAG/issues) on github.

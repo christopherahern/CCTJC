@@ -1,8 +1,8 @@
 local
 data/corpus/*
-data/*
+data/digs15-negative-priming/*
 .*.swp
-ahern.bib
+/ahern.bib
 tex/*.pdf
 tex/*.aux
 tex/*.log
