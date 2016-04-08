@@ -17,6 +17,8 @@ and follow the instructions listed there. Many thanks to
 [Meredith Tamminga](http://meredithtamminga.com/) for sharing the queries and code 
 to generate and process the data.
 
+* Note: the output of this results is currently also in `data/neg-data.csv`
+
 ## Code
 
 For running the code we recommend installing the [Anaconda](https://www.continuum.io/downloads)
