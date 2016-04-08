@@ -31,8 +31,9 @@ python distribution. To run the Jupyter notebook, run the following in `src/`:
 
     ipython notebook
 
-From there you can run the analysis in order and it will print results. The output of the
-notebook can also be viewed [here](http://nbviewer.jupyter.org/github/christopherahern/SEMPRAG/blob/master/src/Ahern-Clark-SP-2016-Appendix.ipynb). 
+From there you can run the analysis in order and it will print results. 
+
+The output of the notebook can also be viewed [here](http://nbviewer.jupyter.org/github/christopherahern/SEMPRAG/blob/master/src/Ahern-Clark-SP-2016-Appendix.ipynb) independently of installing any additional software. 
 
 In the future we plan to:
 * [Convert notebook to python and R scripts](https://github.com/christopherahern/SEMPRAG/issues/1)
