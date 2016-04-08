@@ -2,7 +2,8 @@
 
 This repository contains the code and source files for the paper entitle 
 "Conflict, Cheap Talk, and Jespersen's Cycle" submitted to the journal
-Semantics & Pragmatics by Christopher Ahern and Robin Clark.
+Semantics & Pragmatics by [Christopher Ahern](http://christopherahern.github.io/)
+ and [Robin Clark](http://www.ling.upenn.edu/~rclark/Site/Welcome.html).
 
 
 # Instructions
@@ -18,18 +19,29 @@ to generate and process the data.
 
 ## Code
 
-To run the code we recommend installing the [Anaconda](https://www.continuum.io/downloads)
-python distribution. 
+For running the code we recommend installing the [Anaconda](https://www.continuum.io/downloads)
+python distribution. To run the Jupyter notebook, run the following in `src/`:
 
+    ipython notebook
+
+From there you can run the analysis in order and it will print results. The output of the
+notebook can also be viewed [here](http://nbviewer.jupyter.org/github/christopherahern/SEMPRAG/blob/master/src/Ahern-Clark-SP-2016-Appendix.ipynb). 
+
+In the future we plan to:
+* Convert notebook to python and R scripts
+* Add make.sh script to automate set up and analysis 
+* ...
 
 # Citation
 
 If you want to cite this paper, please use the following:
 
+	Ahern, Christopher and Robin Clark. Conflict, Cheap Talk, and Jespersen's Cycle. 2016
 
+If you reference the results of this paper, please also cite [the corpus](https://www.ling.upenn.edu/hist-corpora/citing-corpora.html)
+ used:
 
-If you reference the results of this paper, please also cite the corpus used:
-
+	Kroch, Anthony, and Ann Taylor. 2000. The Penn-Helsinki Parsed Corpus of Middle English (PPCME2). Department of Linguistics, University of Pennsylvania. CD-ROM, second edition, release 4 (http://www.ling.upenn.edu/ppche-release-2016/PPCME2-RELEASE-4). 
 
 # Comments
 
