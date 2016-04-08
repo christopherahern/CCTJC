@@ -1,6 +1,6 @@
 # Description
 
-This repository contains the code and source files for the paper entitle 
+This repository contains the source code for the paper entitle 
 "Conflict, Cheap Talk, and Jespersen's Cycle" submitted to the journal
 Semantics & Pragmatics by [Christopher Ahern](http://christopherahern.github.io/)
  and [Robin Clark](http://www.ling.upenn.edu/~rclark/Site/Welcome.html).
@@ -17,9 +17,14 @@ and follow the instructions listed there. Many thanks to
 [Meredith Tamminga](http://meredithtamminga.com/) for sharing the queries and code 
 to generate and process the data.
 
-* Note: the output of this results is currently also in `data/neg-data.csv`
+* The output of this results is currently also in `data/neg-data.csv`
+* This means that the analysis can be run independently using just this repository
 
 ## Code
+
+To run the code either download the files as a ZIP, or clone the repository:
+
+    git clone https://github.com/christopherahern/SEMPRAG.git
 
 For running the code we recommend installing the [Anaconda](https://www.continuum.io/downloads)
 python distribution. To run the Jupyter notebook, run the following in `src/`:
@@ -33,6 +38,13 @@ In the future we plan to:
 * [Convert notebook to python and R scripts](https://github.com/christopherahern/SEMPRAG/issues/1)
 * [Add make.sh script to automate set up and analysis](https://github.com/christopherahern/SEMPRAG/issues/2) 
 * ...
+
+
+# Document
+
+To compile the document, run the following in `tex/`:
+
+    pdflatex Ahern-Clark-SP-2016.tex
 
 # Citation
 
