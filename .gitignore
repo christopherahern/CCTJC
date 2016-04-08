@@ -9,4 +9,4 @@ tex/*.log
 tex/*.blg
 tex/*.synctex.gz
 tex/*.tex.backup
-src/.ipynb_checkpoints
+src/.ipynb_checkpoints/*
