@@ -28,8 +28,8 @@ From there you can run the analysis in order and it will print results. The outp
 notebook can also be viewed [here](http://nbviewer.jupyter.org/github/christopherahern/SEMPRAG/blob/master/src/Ahern-Clark-SP-2016-Appendix.ipynb). 
 
 In the future we plan to:
-* Convert notebook to python and R scripts
-* Add make.sh script to automate set up and analysis 
+* [Convert notebook to python and R scripts](https://github.com/christopherahern/SEMPRAG/issues/1)
+* [Add make.sh script to automate set up and analysis](https://github.com/christopherahern/SEMPRAG/issues/2) 
 * ...
 
 # Citation

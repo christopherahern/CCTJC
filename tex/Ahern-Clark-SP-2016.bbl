@@ -1,0 +1,410 @@
+\begin{thebibliography}{73}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{Altmann et~al.(1983)Altmann, von Buttlar, Rott \&
+  Strauss}]{altmann-etal1983}
+Altmann, Gabriel, Haro von Buttlar, Walter Rott \& Udo Strauss. 1983.
+\newblock A law of change in language.
+\newblock In Brian Brainard (ed.), \emph{Historical linguistics}, 104--115.
+
+\bibitem[{Austin(1962)}]{austin1962}
+Austin, John. 1962.
+\newblock \emph{{How to do things with words}}.
+\newblock Clarendon Press.
+
+\bibitem[{Benz et~al.(2006)Benz, Jaeger \& van
+  Rooij}]{benz-jager-van-rooij:2006}
+Benz, Anton, Gerhard Jaeger \& Robert van Rooij (eds.). 2006.
+\newblock \emph{{Game Theory and Pragmatics}}.
+\newblock Palgrave Macmillan.
+
+\bibitem[{Blume et~al.(2001)Blume, DeJong, Kim \& Sprinkle}]{blume-etal:2001}
+Blume, Andreas, Douglas~V DeJong, Yong-Gwan Kim \& Geoffrey~B Sprinkle. 2001.
+\newblock {Evolution of communication with partial common interest}.
+\newblock \emph{Games and Economic Behavior} 37(1). 79--120.
+
+\bibitem[{B{\"o}rgers \& Sarin(1997)}]{borgers-sarin1997}
+B{\"o}rgers, Tilman \& Rajiv Sarin. 1997.
+\newblock {Learning through reinforcement and replicator dynamics}.
+\newblock \emph{Journal of Economic Theory} 77(1). 1--14.
+
+\bibitem[{Burnham \& Anderson(2003)}]{burnham2003}
+Burnham, Kenneth~P \& David~R Anderson. 2003.
+\newblock \emph{Model selection and multimodel inference: a practical
+  information-theoretic approach}.
+\newblock Springer Science \& Business Media.
+
+\bibitem[{Bush \& Mosteller(1955)}]{bush-mosteller1955}
+Bush, Robert \& Frederick Mosteller. 1955.
+\newblock \emph{Stochastic models for learning}.
+\newblock Wiley.
+
+\bibitem[{Byrd et~al.(1995)Byrd, Lu, Nocedal \& Zhu}]{byrd1995}
+Byrd, Richard~H, Peihuang Lu, Jorge Nocedal \& Ciyou Zhu. 1995.
+\newblock A limited memory algorithm for bound constrained optimization.
+\newblock \emph{SIAM Journal on Scientific Computing} 16(5). 1190--1208.
+
+\bibitem[{Crawford \& Sobel(1982)}]{crawford-sobel:1982}
+Crawford, Vincent~P \& Joel Sobel. 1982.
+\newblock {Strategic information transmission}.
+\newblock \emph{Econometrica} 1431--1451.
+
+\bibitem[{Croft(1991)}]{croft1991}
+Croft, William. 1991.
+\newblock The evolution of negation.
+\newblock \emph{Journal of Linguistics} 27(01). 1--27.
+
+\bibitem[{Dahl(1979)}]{dahl:1979}
+Dahl, Osten. 1979.
+\newblock {Typology of Sentence Negation}.
+\newblock \emph{Linguistics} 17(1-2). 79--106.
+
+\bibitem[{Dahl(2001)}]{dahl:2001}
+Dahl, Osten. 2001.
+\newblock \emph{{Inflationary effects in language and elsewhere}} 471--480.
+\newblock Philadelphia: John Benjamins Publishing Company.
+
+\bibitem[{Danescu-Niculescu-Mizil \& Lee(2010)}]{Danescu-Niculescu-Mizil2010}
+Danescu-Niculescu-Mizil, Cristian \& Lillian Lee. 2010.
+\newblock Don't `have a clue’? {Unsupervised} co-learning of
+  downward-entailing operators.
+\newblock In \emph{Proceedings of acl}, 247--252.
+
+\bibitem[{{{De Jaegher}} \& {van Rooij}(2013)}]{de-jaegher-van-rooij:2013}
+{{De Jaegher}}, Kris \& Robert {van Rooij}. 2013.
+\newblock {Game-theoretic pragmatics under conflicting and common interests}.
+\newblock \emph{Erkenntnis} 1--52.
+
+\bibitem[{Deo(2015)}]{deo2015}
+Deo, Ashwini. 2015.
+\newblock The semantic and pragmatic underpinnings of grammaticalization paths:
+  The progressive to imperfective shift.
+\newblock \emph{Semantics and Pragmatics} 8. 1--52.
+
+\bibitem[{Dessalles(2014)}]{dessalles2014}
+Dessalles, Jean-Louis. 2014.
+\newblock Optimal investment in social signals.
+\newblock \emph{Evolution} 68(6). 1640--1650.
+
+\bibitem[{Dessalles(2007)}]{dessalles2007}
+Dessalles, JL. 2007.
+\newblock \emph{Why we talk}.
+\newblock Oxford University Press, Oxford.
+
+\bibitem[{Detges \& Waltereit(2002)}]{detges-waltereit2002}
+Detges, Ulrich \& Richard Waltereit. 2002.
+\newblock {Grammaticalization vs. reanalysis: A semantic-pragmatic account of
+  functional change in grammar}.
+\newblock \emph{Zeitschrift f{"u}r Sprachwissenschaft} 21(2). 151--195.
+
+\bibitem[{Ecay \& Tamminga(2015)}]{ecay-tamminga2015}
+Ecay, Aaron \& Meredith Tamminga. 2015.
+\newblock Persistence as a diagnostic of grammatical status: The case of middle
+  english negation.
+\newblock In Rob Truswell \& Mathieu F (eds.), \emph{From micro-change to
+  macro-change}, 11. Oxford University Press.
+
+\bibitem[{Enke et~al.(2016)Enke, Muhlenbernd \& Yanovich}]{enke2016}
+Enke, Dankmar, Roland Muhlenbernd \& Igor Yanovich. 2016.
+\newblock The emergence of the progressive to imperfective diachronic cycle in
+  reinforcement-learning agents.
+\newblock In Sean Roberts, Christine Cuskley, Luke McCrohon, Lluis
+  Barcelo-Coblijn, Olga Feher \& Tessa Verhoef (eds.), \emph{The evolution of
+  language: Proceedings of the eleventh international conference on the
+  evolution of language}, .
+
+\bibitem[{Farrell(1993)}]{farrell:1993}
+Farrell, Joseph. 1993.
+\newblock {Meaning and Credibility in Cheap-Talk Games}.
+\newblock \emph{Games and Economic Behavior} 5. 514--531.
+
+\bibitem[{Fauconnier(1975)}]{fauconnier1975}
+Fauconnier, Gilles. 1975.
+\newblock {Pragmatic scales and logical structure}.
+\newblock \emph{Linguistic inquiry} 353--375.
+
+\bibitem[{Franke et~al.(2012)Franke, {de Jager} \& {van
+  Rooij}}]{franke-etal:2012}
+Franke, Michael, Tikitu {de Jager} \& Robert {van Rooij}. 2012.
+\newblock {Relevance in Cooperation and Conflict}.
+\newblock \emph{Journal of Logic and Computation} 22(1). 23--54.
+
+\bibitem[{Gardiner(1905)}]{gardiner1904}
+Gardiner, Alan~H. 1905.
+\newblock The word.
+\newblock \emph{Zeitschrift f{\"u}r {\"A}gyptische Sprache} 41(JG). 130--135.
+
+\bibitem[{Gintis et~al.(2001)Gintis, Smith \& Bowles}]{gintis2001}
+Gintis, Herbert, Eric~Alden Smith \& Samuel Bowles. 2001.
+\newblock Costly signaling and cooperation.
+\newblock \emph{Journal of theoretical biology} 213(1). 103--119.
+
+\bibitem[{Giv{\'o}n(1978)}]{givon1978}
+Giv{\'o}n, Talmy. 1978.
+\newblock {Negation in language}.
+\newblock In Peter Cole (ed.), \emph{{Syntax and Semantics, Volume 9:
+  Pragmatics}}, 69--112. Mouton de Gruyter.
+
+\bibitem[{Grice(1975)}]{grice1975}
+Grice, H.P. 1975.
+\newblock {Logic and conversation}.
+\newblock In \emph{{Studies in the Way of Words}}, 22--40. Harvard University
+  Press.
+
+\bibitem[{Hamilton(1963)}]{hamilton1963}
+Hamilton, William~D. 1963.
+\newblock {The evolution of altruistic behavior}.
+\newblock \emph{American naturalist} 354--356.
+
+\bibitem[{Hamilton(1964)}]{hamilton1964}
+Hamilton, William~D. 1964.
+\newblock {The genetical evolution of social behaviour.}
+\newblock \emph{Journal of theoretical biology} 7(1). 1--16.
+
+\bibitem[{Hardin(1968)}]{hardin:1968}
+Hardin, G. 1968.
+\newblock {The Tragedy of the Commons}.
+\newblock \emph{Science} 162(3859). 1292--1297.
+
+\bibitem[{Hofbauer \& Huttegger(2015)}]{hofbauer-huttegger2015}
+Hofbauer, Josef \& Simon~M Huttegger. 2015.
+\newblock Selection-mutation dynamics of signaling games.
+\newblock \emph{Games} 6(1). 2--31.
+
+\bibitem[{Hofbauer \& Sigmund(1998)}]{hofbauer-sigmund1998}
+Hofbauer, Josef \& Karl Sigmund. 1998.
+\newblock \emph{Evolutionary games and population dynamics}.
+\newblock Cambridge University Press.
+
+\bibitem[{Hopper \& Traugott(2003)}]{hopper-traugottt2003}
+Hopper, Paul~J \& Elizabeth~Closs Traugott. 2003.
+\newblock \emph{{Grammaticalization}}.
+\newblock Cambridge University Press.
+
+\bibitem[{Horn(1989)}]{horn:1989}
+Horn, Laurence~R. 1989.
+\newblock \emph{{A natural history of negation}}.
+\newblock University of Chicago Press.
+
+\bibitem[{Israel(2011)}]{israel2011}
+Israel, Michael. 2011.
+\newblock \emph{The grammar of polarity: Pragmatics, sensitivity, and the logic
+  of scales}.
+\newblock Cambridge University Press.
+
+\bibitem[{J{\"a}ger et~al.(2011)J{\"a}ger, Metzger \& Riedel}]{jager2011}
+J{\"a}ger, Gerhard, Lars~P Metzger \& Frank Riedel. 2011.
+\newblock Voronoi languages: Equilibria in cheap-talk games with
+  high-dimensional types and few signals.
+\newblock \emph{Games and economic behavior} 73(2). 517--537.
+
+\bibitem[{Jespersen(1917)}]{jespersen:1917}
+Jespersen, Otto. 1917.
+\newblock \emph{{Negation in English and other Languages}}.
+\newblock Host.
+
+\bibitem[{Jones(2015)}]{jones2015}
+Jones, Taylor. 2015.
+\newblock {Eem neagation in AAVE: A next step in Jespersen's Cycle}, .
+
+\bibitem[{Kadmon \& Landman(1993)}]{kadmon-landman1993any}
+Kadmon, Nirit \& Fred Landman. 1993.
+\newblock {Any}.
+\newblock \emph{Linguistics and philosophy} 16(4). 353--422.
+
+\bibitem[{Keller(1994)}]{Keller:1994}
+Keller, R. 1994.
+\newblock \emph{{On language change: The invisible hand in language}}.
+\newblock Routledge.
+
+\bibitem[{Kiparsky \& Condoravdi(2006)}]{kiparsky-condoravdi:2006}
+Kiparsky, Paul \& Cleo Condoravdi. 2006.
+\newblock {Tracking Jespersen's Cycle}.
+\newblock In Mark Janse (ed.), \emph{{ Proceedings of the 2nd International
+  Conference of Modern Greek Dialects and Linguistic Theory}}, University of
+  Patras.
+
+\bibitem[{Klima(1964)}]{klima1964}
+Klima, Edward~S. 1964.
+\newblock Negation in english.
+\newblock In Jerry Fodor \& Jerrold Katz (eds.), \emph{The structure of
+  language}, 246--323. na.
+
+\bibitem[{Krifka(1995)}]{krifka1995polarity}
+Krifka, Manfred. 1995.
+\newblock {The semantics and pragmatics of polarity items}.
+\newblock \emph{Linguistic analysis} 25(3-4). 209--257.
+
+\bibitem[{Kroch \& Taylor(2000)}]{ppcme2}
+Kroch, Anthony \& Ann Taylor (eds.). 2000.
+\newblock \emph{{Penn-Helsinki Parsed Corpus of Middle English Second Edition
+  (PPCME2)}}.
+
+\bibitem[{Kroch(1989)}]{kroch1989}
+Kroch, Anthony~S. 1989.
+\newblock {Reflexes of grammar in patterns of language change}.
+\newblock \emph{Language variation and change} 1(03). 199--244.
+
+\bibitem[{Kullback \& Leibler(1951)}]{kullback-leibler1951divergence}
+Kullback, Solomon \& Richard~A Leibler. 1951.
+\newblock {On information and sufficiency}.
+\newblock \emph{The Annals of Mathematical Statistics} 79--86.
+
+\bibitem[{Ladusaw(1993)}]{ladusaw1993}
+Ladusaw, William~A. 1993.
+\newblock Negation, indefinites, and the jespersen cycle.
+\newblock In \emph{Annual meeting of the berkeley linguistics society},
+  vol.~19, 437--46.
+
+\bibitem[{Landman(1991)}]{landman1991}
+Landman, Fred. 1991.
+\newblock \emph{{Structures for semantics}}.
+\newblock Springer.
+
+\bibitem[{Lewis(1969)}]{lewis:1969}
+Lewis, David. 1969.
+\newblock \emph{{Convention}}.
+\newblock Cambridge: Harvard University Press.
+
+\bibitem[{Lewis(1979)}]{lewis:1979}
+Lewis, David. 1979.
+\newblock {Scorekeeping in a language game}.
+\newblock \emph{Journal of philosophical logic} 8(1). 339--359.
+
+\bibitem[{{{Maynard Smith}}(1982)}]{maynard-smith1982}
+{{Maynard Smith}}, John. 1982.
+\newblock \emph{{Evolution and the Theory of Games}}.
+\newblock Cambridge university press.
+
+\bibitem[{{{Maynard Smith}} \& Harper(2004)}]{maynard-smith-harper:2004}
+{{Maynard Smith}}, John \& David Harper. 2004.
+\newblock \emph{{Animal Signals}}.
+\newblock USA: Oxford University Press.
+
+\bibitem[{Meillet(1912)}]{meillet1912}
+Meillet, Antoine. 1912.
+\newblock \emph{L'{\'e}volution des formes grammaticales}.
+\newblock Nicola Zanichelli.
+
+\bibitem[{Oechssler \& Riedel(2001)}]{oechssler2001}
+Oechssler, J{\"o}rg \& Frank Riedel. 2001.
+\newblock Evolutionary dynamics on infinite strategy spaces.
+\newblock \emph{Economic Theory} 17(1). 141--162.
+
+\bibitem[{Oechssler \& Riedel(2002)}]{oechssler2002}
+Oechssler, J{\"o}rg \& Frank Riedel. 2002.
+\newblock On the dynamic foundation of evolutionary stability in continuous
+  models.
+\newblock \emph{Journal of Economic Theory} 107(2). 223--252.
+
+\bibitem[{Payne(1985)}]{payne1985}
+Payne, John~R. 1985.
+\newblock Negation.
+\newblock In Timothy Shopen (ed.), \emph{Language typology and syntactic
+  description}, 197--242. Cambridge University Press.
+
+\bibitem[{Posner(1985)}]{posner1985}
+Posner, Rebecca. 1985.
+\newblock {Post-verbal Negation in Non-Standard French, a Historical and
+  Comparative View}.
+\newblock \emph{Romance Philology} 39(2). 170--197.
+
+\bibitem[{Schaden(2012)}]{schaden2012}
+Schaden, Gerhard. 2012.
+\newblock Modelling the “aoristic drift of the present perfect” as
+  inflation an essay in historical pragmatics.
+\newblock \emph{International Review of Pragmatics} 4(2). 261--292.
+
+\bibitem[{Schelling(1978)}]{schelling:1978}
+Schelling, T.C. 1978.
+\newblock \emph{{Micromotives and Macrobehavior}}.
+\newblock WW Norton.
+
+\bibitem[{Schwegler(1988)}]{schwegler1988}
+Schwegler, Armin. 1988.
+\newblock Word-order changes in predicate negation strategies in romance
+  languages.
+\newblock \emph{Diachronica} 5(1-2). 21--58.
+
+\bibitem[{Scott-Phillips(2008)}]{scott-phillips:2008}
+Scott-Phillips, T.C. 2008.
+\newblock {On the correct application of animal signalling theory to human
+  communication}.
+\newblock In A.~D.~M. Smith, K.~Smith \& R.~{Ferrer i Cancho} (eds.),
+  \emph{{The evolution of language: Proceedings of the 7th International
+  Conference on the Evolution of Language}}, 275--282. Singapore: World
+  Scientific Press.
+
+\bibitem[{Searcy \& Nowicki(2005)}]{searcy-nowicki:2005}
+Searcy, William~A. \& Stephen Nowicki. 2005.
+\newblock \emph{{The Evolution of Animal Communication: Reliability and
+  Deception in Signaling Systems}}.
+\newblock Princeton: Princeton University Press.
+
+\bibitem[{Selten(1980)}]{selten:1980}
+Selten, Reinhard. 1980.
+\newblock {A note on evolutionarily stable strategies in asymmetric animal
+  conflicts}.
+\newblock \emph{Journal of Theoretical Biology} 84(1). 93--101.
+
+\bibitem[{Simon(1955)}]{simon1955}
+Simon, Herbert~A. 1955.
+\newblock {A behavioral model of rational choice}.
+\newblock \emph{The Quarterly Journal of Economics} 99--118.
+
+\bibitem[{Sutton \& Barto(1998)}]{sutton-barto1998}
+Sutton, Richard~S \& Andrew~G Barto. 1998.
+\newblock \emph{Reinforcement learning: An introduction}.
+\newblock MIT press.
+
+\bibitem[{Taylor \& Jonker(1978)}]{taylor-jonker:1978}
+Taylor, Peter~D. \& Leo~B. Jonker. 1978.
+\newblock {Evolutionary stable strategies and game dynamics}.
+\newblock \emph{Mathematical biosciences} 40(1). 145--156.
+
+\bibitem[{Trivers(1971)}]{trivers1971}
+Trivers, Robert~L. 1971.
+\newblock {The evolution of reciprocal altruism}.
+\newblock \emph{Quarterly review of biology} 35--57.
+
+\bibitem[{{van der Auwera}(2009)}]{vanderAuwera2009}
+{van der Auwera}, Johan. 2009.
+\newblock {The Jespersen Cycles}.
+\newblock In Elly {van Gelderen} (ed.), \emph{{Cyclical Change}}, John
+  Benjamins Publishing Company.
+
+\bibitem[{{Van Gelderen}(2008)}]{vanGelderen2008negative}
+{Van Gelderen}, Elly. 2008.
+\newblock {Negative cycles}.
+\newblock \emph{Linguistic Typology} 12(2). 195--243.
+
+\bibitem[{Wallage(2008)}]{wallage2008}
+Wallage, Phillip. 2008.
+\newblock {Jespersen's cycle in Middle English: parametric variation and
+  grammatical competition}.
+\newblock \emph{Lingua} 118(5). 643--674.
+
+\bibitem[{Yanovich(2015)}]{yanovich2015}
+Yanovich, Igor. 2015.
+\newblock Analyzing imperfective games.
+
+\bibitem[{Yanovich(2016)}]{yanovich2016}
+Yanovich, Igor. 2016.
+\newblock Genetic drift explains sapir's drift in semantic change.
+\newblock In Sean Roberts, Christine Cuskley, Luke McCrohon, Lluis
+  Barcelo-Coblijn, Olga Feher \& Tessa Verhoef (eds.), \emph{The evolution of
+  language: Proceedings of the eleventh international conference on the
+  evolution of language}, .
+
+\bibitem[{Zahavi(1975)}]{Zahavi:1975}
+Zahavi, A. 1975.
+\newblock {Mate selection--a selection for a handicap}.
+\newblock \emph{Journal of theoretical Biology} 53(1). 205--214.
+
+\end{thebibliography}

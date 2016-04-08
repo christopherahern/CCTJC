@@ -2,8 +2,11 @@ local
 data/corpus/*
 data/*
 .*.swp
+ahern.bib
 tex/*.pdf
 tex/*.aux
 tex/*.log
-tex/*.bbl
 tex/*.blg
+tex/*.synctex.gz
+tex/*.tex.backup
+src/.ipynb_checkpoints
