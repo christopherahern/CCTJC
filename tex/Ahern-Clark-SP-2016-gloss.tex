@@ -1,0 +1,53 @@
+\documentclass[linguex]{sp} % Default font size and paper size
+
+
+%\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+
+\usepackage{longtable}
+\usepackage{array}
+
+
+\pdfauthor{}
+%\pdftitle{Ahern-Clark-SP-2015}
+\pdftitle{}
+\pdfkeywords{Language change, Negation, Jespersen's cycle, Evolutionary game theory}
+
+% Optional short title inside square brackets, for the running headers.
+% If no short title is given, no title appears in the headers.
+\title[Conflict, cheap talk, and Jespersen's cycle]{Conflict, cheap talk, and Jespersen's cycle \thanks{We thank  \ldots}}
+
+% Optional short author inside square brackets, for the running headers.
+% If no short author is given, no authors print in the headers.
+\author[Ahern \& Clark]{ 
+  % As many authors as you like, each separated by \AND.
+  \spauthor{Christopher Ahern \\ \institute{Department of Linguistics,\\ University of Pennsylvania}} \AND
+  \spauthor{Robin Clark \\ \institute{Department of Linguistics,\\ University of Pennsylvania}}
+}
+
+
+\begin{document}
+
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{longtable}{p{2cm}|c|p{8cm}}
+\textsc{Symbol} & \textsc{Information} & \textsc{Description}\\
+$T$ & $t \in [0,1]$ & The states that constitute the private information of the speaker. These correspond to a speaker's standard of precision, or how much evidence they have for asserting a proposition. \\
+$M$ &  $m \in \{ \textcolor{red}{m_{ne}}, \textcolor{blue}{m_{ne...not}} \} $ & The set of messages available to speakers in a given instance of the functional cycle.  \\
+$A$ & $a \in [0,1]$  & The actions available to hearers. These correspond to a hearer paying a certain amount of attention to a given speaker.\\
+$p(t)$ & $\int_0^1 p(t) dt = 1 $& The prior probability distribution over standards of precision. \\
+$U_S$ & $U_S : T \times A \rightarrow \mathbb{R}$  & Utility function that represents the speaker preference over outcomes.\\
+$U_R$ & $U_R : T \times A \rightarrow \mathbb{R}$ & Utility function that represents the hearer preference over outcomes.\\
+$b$ & $b \in [0,1]$  & Degree of speaker bias towards uneven exchange of information for status. A larger $b$ indicates a greater bias.\\
+$E[U_S(s,r)]$ & $\int_0^1 U_S(t, r(s(t)))$ & Expected utility for speakers using a strategy $s$ against a hearer strategy $r$\\
+$E[U_R(s,r)]$ & $\int_0^1 U_R(t, r(s(t)))$ & Expected utility for hearers using a strategy $r$ against a speaker strategy $s$\\
+$\mathcal{B}(\alpha, \beta)$ & $E[T \sim \mathcal{B}(\alpha, \beta)] = \frac{\alpha}{\alpha + \beta}$ & Beta distribution over an interval controlled by two shape parameters, $\alpha$ and $\beta$.\\
+$\beta_p$ & $p(t) \sim \mathcal{B}(1, \beta_p)$ & Shape parameter controlling the prior distribution over standards of precision. \\
+$\alpha_s$ & $p(\textcolor{blue}{m_{ne...not}} \mid t ) \sim \mathcal{B}(\alpha_{s}, 1)$ & Shape parameter controlling the initial use of  \textcolor{blue}{$m_{ne...not}$} in high standards of precision.\\
+$\hat{\alpha}_s$, $\hat{\beta}_p$, $\hat{b}$  & -- & Maximum likelihood parameters from the fit of the dynamic model to the corpus data. \\
+
+
+\end{longtable}  
+
+
+\end{document}

@@ -1,0 +1,9 @@
+local
+data/corpus/*
+data/*
+.*.swp
+tex/*.pdf
+tex/*.aux
+tex/*.log
+tex/*.bbl
+tex/*.blg

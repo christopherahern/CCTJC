@@ -1,0 +1,73 @@
+{1:      fun: 513.23579240044648
+     jac: array([  -6.54574706,   -1.35726168,  261.10355975,    0.        ])
+ message: 'Linear search failed'
+    nfev: 115
+     nit: 6
+  status: 4
+ success: False
+       x: array([  5.29527988,  10.34649951,   0.3061215 ,   1.        ]),
+ 2:      fun: 508.94060852810219
+     jac: array([-0.00378577,  0.37980499,  0.07588596,  0.        ])
+ message: 'Linear search failed'
+    nfev: 232
+     nit: 35
+  status: 4
+ success: False
+       x: array([ 13.08914435,  12.46745242,   0.3176922 ,   2.        ]),
+ 3:      fun: 518.65608232312661
+     jac: array([   6.14190867,   -7.17058128, -936.85071079,    0.        ])
+ message: 'Linear search failed'
+    nfev: 79
+     nit: 2
+  status: 4
+ success: False
+       x: array([ 10.89964136,  10.05320475,   0.25370472,   3.        ]),
+ 4:      fun: 506.97206233163661
+     jac: array([ 0.0006537 , -0.03466312,  0.05381935,  0.        ])
+ message: 'Converged (|f_n-f_(n-1)| ~= 0)'
+    nfev: 135
+     nit: 18
+  status: 1
+ success: True
+       x: array([ 15.08240238,  15.36473696,   0.25136552,   4.        ]),
+ 5:      fun: 506.00855260512247
+     jac: array([-0.00253522, -0.00325144, -0.28576892,  0.        ])
+ message: 'Converged (|f_n-f_(n-1)| ~= 0)'
+    nfev: 288
+     nit: 34
+  status: 1
+ success: True
+       x: array([ 16.80113643,  15.94090253,   0.23947315,   5.        ]),
+ 6:      fun: 505.13569184301326
+     jac: array([ 0.0130683 , -0.01901981, -0.89811465,  0.        ])
+ message: 'Converged (|f_n-f_(n-1)| ~= 0)'
+    nfev: 247
+     nit: 30
+  status: 1
+ success: True
+       x: array([ 18.85754495,  16.20048889,   0.23303745,   6.        ]),
+ 7:      fun: 504.0438873090298
+     jac: array([-0.00209184,  0.05998686, -0.17494699,  0.        ])
+ message: 'Converged (|f_n-f_(n-1)| ~= 0)'
+    nfev: 476
+     nit: 63
+  status: 1
+ success: True
+       x: array([ 36.29387799,  13.0690209 ,   0.27997101,   7.        ]),
+ 8:      fun: 530.42502840629243
+     jac: array([-1.79810513, -6.33751824, -0.59400236,  0.        ])
+ message: 'Converged (|f_n-f_(n-1)| ~= 0)'
+    nfev: 120
+     nit: 19
+  status: 1
+ success: True
+       x: array([ 20.26665   ,   8.80224589,   0.23890525,   8.        ]),
+ 9:      fun: 502.97474650010213
+     jac: array([ -1.28807187e-02,  -2.72848411e-04,  -6.56933707e-01,
+         0.00000000e+00])
+ message: 'Converged (|f_n-f_(n-1)| ~= 0)'
+    nfev: 286
+     nit: 39
+  status: 1
+ success: True
+       x: array([ 23.40526218,  16.89614424,   0.21678057,   9.        ])}

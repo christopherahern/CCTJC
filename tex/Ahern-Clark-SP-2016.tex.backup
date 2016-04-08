@@ -1,0 +1,520 @@
+\documentclass[linguex]{sp}
+% possible options: [cm] for Computer Modern font instead of Times
+%                   [linguex] to load the linguex example package
+% e.g.: \documentclass[cm,linguex]{sp}
+
+
+\usepackage{amssymb,amsthm,amsfonts}
+\theoremstyle{definition} \newtheorem{definition}{Definition} 
+\usepackage{sectsty}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{pstricks}
+\usepackage{graphicx}
+
+\usepackage{subfigure}
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata,chains,matrix,positioning,scopes}
+\usepackage[english,greek]{betababel}
+
+\usepackage{natbib}
+
+\graphicspath{{../local/out/}}
+
+% \pdf* commands provide metadata for the PDF output. ASCII characters only!
+%\pdfauthor{Christopher Ahern}
+\pdfauthor{}
+%\pdftitle{Ahern-Clark-SP-2015}
+\pdftitle{}
+\pdfkeywords{Language change, Negation, Jespersen's cycle, Evolutionary game theory}
+
+% Optional short title inside square brackets, for the running headers.
+% If no short title is given, no title appears in the headers.
+\title[Conflict, cheap talk, and Jespersen's cycle]{Conflict, cheap talk, and Jespersen's cycle \thanks{We thank \ldots}}
+
+% Optional short author inside square brackets, for the running headers.
+% If no short author is given, no authors print in the headers.
+%\author[Ahern \& Clark]{
+%  % As many authors as you like, each separated by \AND.
+%  \spauthor{Christopher Ahern \\ \institute{Department of Linguistics,\\ University of Pennsylvania}} \AND
+%  \spauthor{Robin Clark \\ \institute{Department of Linguistics,\\ University of Pennsylvania}}
+%}
+\author[]{
+  % As many authors as you like, each separated by \AND.
+  \spauthor{} \AND
+  \spauthor{}
+}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Game-theory has found broad application in modeling pragmatic reasoning in both the classical Gricean case of common interests between interlocutors and, more recently, in cases of conflicting interests. This work brings these considerations of common and conflicting interests to diachronic patterns of language use. We use tools from  evolutionary game theory to characterize the effect of conflicting interests on how meaning is signaled with costless signals in a population over time. We show that the dynamics of a particular class of inflationary processes in language, including Jespersen's cycle, can be modeled as a consequence of signaling under conflicting interests and the resulting model to historical corpus data.
+\end{abstract}
+
+\begin{keywords}
+	 Language change, Negation, Jespersen's cycle, Evolutionary game theory
+\end{keywords}
+
+\section{Introduction}
+Conflicts of interest play markedly different roles in Linguistics and Biology. On the one hand, Gricean pragmatics has aimed at understanding the inferences that a listener can draw from a speaker's contribution on the explicit assumption of a shared set of purposes for an exchange. On the other hand, research in animal communication has aimed at understanding the existence and persistence of signaling systems in the face of inter- and intra-species conflict.  Both endeavors hinge on the role of conflict, either in its presence or absence. In the abstract, though, both deal with the transmission and interpretation of signals by senders and receivers. This leads us to consider what happens when we extend our linguistic considerations beyond perfectly aligned interests. 
+
+At first glance, this step outside the idealized realm of common causes yields some forbidding results: conflicts of interest would seem to erode communication. The following reasoning from animal signaling makes clear the root of this unraveling \citep{searcy-nowicki:2005}. Imagine two agents: a sender who sends a signal and a receiver who receives the signal. Suppose that the sender has no incentive to be truthful, in fact, let us suppose that he has every incentive to deceive the receiver. If the sender has an incentive to deceive, then the receiver should not listen. If the receiver does not listen, then the sender has no motive to signal in the first place. Crucially, the actions of the sender depend on those of the receiver and vice versa. Given this interdependence, conflicting interests undermine the information conveyed by signals, rendering them, so to speak, meaningless. 
+
+The same reasoning holds in the case of an entire population of senders and receivers interacting over time. Senders will learn or evolve to dissimulate and receivers will learn or evolve to distrust. This process takes on the familiar form of the \emph{tragedy of the commons} \citep{hardin:1968}. Individuals will always be tempted to exploit the common resource of credulity. Collectively, this incentive to exploit exhausts the resource. Only a fool would tell the truth when there is something to be gained from deception, and only a fool would trust others to be truthful. 
+
+Silence, or at best meaningless babble, is the equilibrium state in the population: neither senders nor receivers have reason to unilaterally change their behavior. Thomas Schelling's grim pronouncement comes to mind \citeyearpar[26]{schelling:1978}:  
+
+\begin{quote}
+The body of a hanged man is in equilibrium when it finally stops swinging, but nobody is going to insist that the man is all right.
+\end{quote}
+This sentiment holds doubly. The inability to convey information would seem problematic and we do observe informative signaling both in the case of human language and animal communication more broadly. The existence of such signaling despite conflicting interests is a genuine puzzle.
+
+This problem was not lost on Grice, insofar as he recognized the fundamental role of his \emph{Maxim of quality} to the entire enterprise.
+
+\begin{quote}
+It is obvious that the observance of some of these maxims is a matter of less urgency than is the observance of others; a man who has expressed himself with undue prolixity would, in general, be open to milder comment than would a man who has said something he believes to be false...[O]ther maxims come into operation only on the assumption that this maxim of Quality is satisfied \citep[27]{grice1975}
+\end{quote}
+Yet, while we have every incentive to abide by the maxim of quality when it serves our interests, we have every reason to do otherwise when it does not. So, what keeps human language from the downward spiral to silence? In this regard we can look to animal communication where much work has been devoted to explaining the evolutionary stability of communication. These solutions take the form of different mechanisms that mitigate conflicts of interest between senders and receivers. 
+
+For example, a sender might guarantee his commitment to the truth by incurring a sufficiently high cost to send a signal. This \emph{handicap principle}  \citep{Zahavi:1975} allows for stable signaling despite conflicting interests.\footnote{See \cite{maynard-smith-harper:2004} and \cite{searcy-nowicki:2005} for thorough discussions of handicaps in animal signaling.} To take the usual example, a peacock incurs a cost for his magnificent tail: significant metabolic resources are required to develop the tail, and once developed, his ability to fly is hampered. In all, the tail makes the peacock far more conspicuous and thus vulnerable to predators. But, successfully bearing the tail serves as a signal of his genetic worth. A weaker peacock would not have been able to support the tail and avoid becoming something else's lunch. Thus, potential mates  can take the tail as a signal of a a truly fit peacock.
+
+However, when we turn our attention to language, this sort of mechanism need not be appropriate.  In fact, the notion that truthfulness is enforced by cost is problematic: truth tellers expend as much effort learning and producing their language as liars, and no more. As we say, talk is cheap. There are, of course, various alternatives to handicaps that are appropriate for the case of language \citep{scott-phillips:2008}. Regardless of the details of the actual mechanisms that mitigate conflict, we know two things. First, given that language exists, such mechanisms are clearly sufficient to stave off total collapse. Second, given that signals are not always used in perfect accordance with the maxim of quality, such mechanism are not sufficient to ensure the idealized case of Gricean commonality. These facts prompt two important questions.
+
+First, if language is indeed subject to a host of competing pressures, what does this mean for the usual Gricean rationale for linguistic behavior as something that is ``\emph{reasonable} for us to follow, that we \emph{should not} abandon'' \citep[29]{grice1975}? When the interests of speakers and hearers diverge can we flip this rationale on its head and find a reason for change rather than stability? Second, given the stability of language as a whole, if not a tragedy of the commons, might we find a smaller scale \emph{tragedy of the conversation}, where particular linguistic signals, but not the system as a whole, are destabilized through repeated interactions? Do we find instantiations of the predicted patterns of language use? Can we explain why particular kinds of change happen?
+
+To address these questions, we consider the class of \emph{inflationary} processes noted by \cite{dahl:2001} in which the conditions of use for a particular linguistic signal are extended over time. In particular, we focus on the development in the expression of negation over time known as \emph{Jespersen's cycle}  \citeyearpar{jespersen:1917} where an initially emphatic form of negation increases in frequency over time and undergoes a kind of \emph{bleaching}.  We argue that this increase in frequency and loss of information can be explained by the fact that language is used both to convey information and negotiate social status \citep{desalles2007,franke-etal:2012}. Simply put, hearers benefit when speakers share useful information, but  speakers also benefit when hearers confer status by listening to what they have to say. Under these conditions, the interests of speakers and hearers are largely, but not perfectly aligned. Using \emph{evolutionary game theory} \citep{maynard-smith1982}, we model how the interaction between speakers and hearers changes the information carried by signals over time.
+
+The main contributions of this work are twofold. The first contribution is that we offer a formal dynamic model to characterize the pressures underlying inflationary processes and show how they can be used to explain the increase in frequency of the emphatic form of negation observed in Jespersen's cycle. While these pressures are often assumed, they are not explicitly formulated (cf. \citealt{detges-waltereit2002, hopper-traugottt2003, kiparsky-condoravdi:2006}, \emph{inter alia}). In doing so, we also make explicit the information-theoretic foundation of grammaticalization processes such as bleaching. The second contribution of this work is that while we follow recent examinations of the role of common and conflicting interests in pragmatic reasoning \citep{benz-jager-van-rooij:2006, franke-etal:2012, de-jaegher-van-rooij:2013}, using evolutionary game theory allows us to relax the assumption of rationality. That is, here we assume that individuals are \emph{boundedly rational} agents with limited cognitive and informational resources, rather than the logically omniscient and  computationally omnipotent \emph{homo economicus} \citep{simon1955}. This is important insofar as language change is not the product of conscious introspection, deliberation, or calculation. Rather, it is a kind of invisible-hand phenomenon in the sense of \cite{Keller:1994}, which arises from the myopic interactions of an entire population of individuals.  Taking this approach, the dynamics of signaling in a population can be modeled as a simple kind of learning which has deep connections with one of the most well known evolutionary \emph{game dynamics}.
+
+%the \emph{replicator dynamics} \citep{taylor-jonker:1978}, which are deeply connected to a simple form of learning.
+
+The rest of the paper is organized as follows. In Section \ref{Jespersen's cycle}, we present a general overview of Jespersen's cycle, noting that the term is used to refer to two often-related but distinct processes: the \emph{formal cycle} describes the forms of negation over time, the \emph{functional cycle} describes how those forms are used to signal information over time. We note the logical relationship between the two cycles and focus on functional cycle as an inflationary process. In Section \ref{Signaling} we model the interaction between speakers and hearers as well as their respective interests as a \emph{signaling game} \citep{lewis:1969}. In Section \ref{Equilibrium} we determine the \emph{evolutionarily stable strategies} of the signaling game, which correspond to speaker and hearer behaviors in a population that are resistant to change. In Section \ref{Dynamics} we consider the dynamics of signaling in a population over time under varying degrees of conflicting interests. We fit the resulting model to corpus data from the functional cycle in Middle English and discuss the fitted parameters. In Section \ref{Conclusion} we conclude by discussing the implications of the model and its relation to models where signals are costly rather than cheap.
+
+
+\section{Jespersen's cycle}
+\label{Jespersen's cycle}
+
+
+Originally coined by \citet[88]{dahl:1979}, the term \emph{Jespersen's cycle} is often used in reference to the following observation regarding sentential negation\footnote{Sentential negation refers to the semantic property of negating an entire proposition, not just some subpart. It can be distinguished from morphological (e.g. \emph{un-}, \emph{non-}) and constituent negation (e.g. \emph{John might have not understood}) using several diagnostics such as tag questions \citep{klima1964}  and performative paraphrases \citep{payne1985}. Sentential negation is also distinct from but related to the syntactic notion of standard negation \citep{miestamo2005}, which refers to constructions that can reverse the truth value of a proposition.} in several languages made by \citet[4]{jespersen:1917}.
+
+\begin{quote}
+The history of negative expressions in various languages makes us witness the following curious fluctuation: the original negative adverb is first weakened, then found insufficient and therefore strengthened, generally through some additional word, and this in its turn may be felt as the negative proper and may then in course of time be subject to the same developments as the original word.
+\end{quote}
+However, this passage can and has been interpreted in two very distinct ways \citep{vanderAuwera2009}. The fundamental ambiguity stems from the fact that Jespersen noted both \emph{formal} and \emph{functional} patterns in the expression of sentential negation over time. Both patterns can be conceived of as cycles in their own right. That is, we can define a series of transitions from and back to states that are in some sense formally or functionally equivalent. But, the term Jespersen's cycle is often used in one way or the other, without clear distinction. 
+
+Indeed, the canonical presentation of what is referred to as Jespersen's cycle conflates these two uses (cf. \citealt{posner1985,schwegler1988,ladusaw1993}). Where parentheses at the second stage indicate an optional post-verbal element that is characterized as being emphatic, the following stages are posited.
+
+\begin{itemize}
+    \item [1.] \textsc{\textcolor{red}{neg V}}
+    \item [2.]  \textsc{\textcolor{red}{neg V} \textcolor{blue}{(neg)}}
+    \item [3.] \textsc{\color{blue} neg V neg}
+    \item [4.] \textsc{\color{green} V neg}
+\end{itemize}
+At the start of the cycle, negation is expressed by a single pre-verbal element. At the second stage of the cycle an optional post-verbal element creates an emphatic bipartite form. At the third stage of the cycle the post-verbal element is obligatory and the bipartite form ceases to be emphatic. At the fourth stage we see the loss of the pre-verbal element resulting in a post-verbal form.
+
+In this section we define and distinguish the two uses of the term intertwined in this representation, which we will call the formal and functional Jespersen cycles. In short, the distinction is between changes in the forms of negation available and changes in how those forms are used to signal information, respectively.  First, we outline the formal aspects of how negation is expressed at the stages of the formal cycle. Second, we outline the function of those forms at different stages of the functional cycle. Finally, we note how the functional cycle falls into a broader class of inflationary processes observed in language change.
+
+The formal cycle is defined in terms of the forms that are used to express negation over time, and consists of two transitions. We see the first stage of the formal cycle in the history of English with the pre-verbal \emph{\textcolor{red}{ne}} in Old English, which expresses sentential negation alone.
+
+\exg. Ic \textcolor{red}{ne} secge\\
+      I \textsc{neg} say\\
+      (Old English)
+
+This is followed by a transition to bipartite negation where another negative element is added. This is seen in Middle English, where \emph{\textcolor{blue}{ne}} is supplemented by \emph{\textcolor{blue}{not}}.
+
+\exg. I \textcolor{blue}{ne} seye \textcolor{blue}{not}\\
+      I \textsc{neg} say \textsc{neg}\\
+      (Middle English)
+
+The final stage in the formal cycle is a return to a single negative element. This is seen in Early Modern English, where the preverbal element in \emph{\textcolor{blue}{ne...not}}  is lost, leaving the post-verbal \emph{\textcolor{green}{not}}  as the sole negative element.
+
+\exg. I say \textcolor{green}{not}\\
+      I say \textsc{neg}\\
+      (Early Modern English)
+
+So, the formal cycle consists of the increase and then decrease in the formal complexity of sentential negation. It is cyclic in the sense that the forms of negation at the start and end are of equal formal complexity. Before moving on, there are two important points to emphasize.
+
+First, the emergence of \emph{do}-support in Early Modern English yields a state parallel to Old English with a sole pre-verbal negator, but it is not a necessary component of the formal cycle.\footnote{\citet[10]{jespersen:1917} noted the uniqueness of these developments, which he attributed to a tendency to place negation at the beginning of the sentence to avoid confusion on the part of hearers. Yet, despite this purported tendency, the majority of languages that Jespersen noted, including his native Danish, persist in a supposedly perplexing state of purely post-verbal negation.} That is, while negation in Present-day English may be structurally parallel to Old English, negation has been formally parallel since the loss of the bipartite form \emph{\textcolor{blue}{ne...not}}.
+
+\exg. I do\textcolor{red}{n't} say\\
+      I do-\textsc{neg} say\\
+      (Present-day English)
+
+As a point of comparison, we observe the same transition from pre- to bipartite to post-verbal forms of negation in French, but no subsequent transition back to pre-verbal negation. When it comes to the formal cycle it matters how much material is used to express negation, not necessarily where that material stands in relation to the verb.
+
+Second, the formal cycle is not necessarily the transition from pre- to post-verbal negation. That is, the bipartite form is not necessarily formed through the addition of a post-verbal element. For example, in modern African American Vernacular English, negation can be supplemented by a pre-verbal element \emph{eem}, which can also express negation in its own right \citep{jones2015}.
+
+\ex. You do\textcolor{blue}{n't eem} know.
+
+\ex. You \textcolor{green}{eem} know.
+
+The formal cycle could just as well be from post- to pre-verbal negation. It is a contingent historical fact, arising from the syntax of  English and the source of the additional  material, rather than some necessary property of the formal cycle. Again, it is the formal status rather than the structural position that is relevant.
+
+While the formal cycle is defined by the forms of negation over time, the functional cycle is defined by how those forms are put to use, and is characterized by two transitions.  The first transition occurs with the introduction of a stronger more emphatic negative form, often the result of elements being added to the original plain form. The initial effect of the bipartite form, in Jespersen's words \citeyearpar[15]{jespersen:1917}:\footnote{Despite the evocative phrasing, Jespersen was certainly not the first to notice the trajectory of the functional cycle. \cite{vanderAuwera2009} suggests \emph{Meillet's spiral} \citeyearpar[394]{meillet1912} as a potentially more appropriate term for the functional cycle, to which we might add \emph{Gardiner's gyre} \citeyearpar[134]{gardiner1904}.
+%: Les langues suivent ainsi une sorte de dveloppement en spirale : elles ajoutent des mots accessoires pour obtenir une expression intense : ces mots sÕaffaiblissent, se dgradent et tombent au niveau de simples outils grammaticaux ; on ajoute de nouveaux mots ou des mots diffrents en vue de lÕexpression ; lÕaffaiblissement recommence et ainsi sans fin.} 
+%\begin{quotation}Thus, languages follow a sort of spiral development: they add extra words to intensify expression; these words fade; decay and fall to the level of simple grammatical tools; one adds new or different words on account of expressiveness; the fading begins again, and so on endlessly. \end{quotation}
+}
+
+\begin{quotation}
+...[I]n most cases the addition serves to make the negative more impressive as being more vivid or picturesque, generally through an exaggeration, as when substantives meaning something very small are used as subjuncts.
+\end{quotation}
+
+The second transition of the functional cycle occurs as the new emphatic form increases in frequency, weakens in intensity, and replaces the original negative form. The functional cycle occurs when one form of plain negation is replaced by another form. It is cyclic in the sense that the number of functionally distinct forms of negation increases then decreases. For example, in the history of English and French an initially emphatic bipartite form weakens over time and comes to have the same force as the pre-verbal form.
+
+% bipartite form pre-verbal element is supplemented by a post-verbal element, which strengthens negation. The meaning of the combined pre- and post-verbal elements weakens over time, and the two elements come to have the same force as the original pre-verbal element in isolation. 
+
+There are two important points to be made with regard to the functional cycle and its relationship to the formal cycle. First, the conflation of the formal and functional cycles understandably stems from the fact that the functional cycle often coincides with the first transition of the formal cycle.  Intuitively, \emph{\textcolor{blue}{ne...not}} is a more complex form than  \emph{\textcolor{red}{ne}}, and thus we would expect it have a more restricted and hence stronger meaning. Note that this does not apply to the second transition of the formal cycle given that the same relationship between \emph{\textcolor{green}{not}} and \emph{\textcolor{blue}{ne...not}} does not hold.  Second, while the functional cycle often takes place within the first transition of the formal cycle, it can occur entirely independently of the formal cycle.  
+
+For instance, one form can be replaced by another of equal formal complexity.  Or, in Meillet's \citeyearpar[134]{meillet1912} estimation, the functional cycle is achieved when ``one adds  new \emph{or} different words''.  \cite{kiparsky-condoravdi:2006} show that this is exactly what takes place in the history of Greek. Historical forms of negation in Greek are listed in Table \ref{greek-table}, where emphatic negation is taken to be the semantically stronger form in comparison to \emph{plain} negation at any point in time.\footnote{We omit some of the emphatic forms for a concise presentation (cf. \citealt[1]{kiparsky-condoravdi:2006}). Whether there any form is ever  \emph{the} emphatic form depends on what we mean by \emph{emphasis}, a point we return to in Section \ref{Signaling}. Crucially, however, it is only ever a single emphatic form that displaces the old plain 
+form.} The sources of the different forms are ordered chronologically.
+
+%There are always means for augmenting plain negation to make it emphatic (e.g. `at all', `ever', cf. \citet[452]{horn:1989}). But only a single previously emphatic form becomes the plain form.  In Section \ref{Signaling} we  return to what exactly we might mean by 
+
+
+\begin{table}
+    \begin{center}
+    \begin{tabular}{@{}ccc@{}}
+      \hline
+      \textsc{plain} & \textsc{emphatic} & \textsc{source} \\
+      \hline
+      \textgreek{ou...ti} & \textgreek{ou-de...en} & Ancient Greek \\
+      \textgreek{(ou)den...ti} & \textgreek{den...tipote} & Early Medieval Greek \\
+      \textgreek{den...tipote} & \textgreek{den... prama} & Greek Dialects \\
+      \textgreek{den...prama} & \textgreek{den...apantoxh} & Modern Cretan \\
+      \hline
+    \end{tabular}
+    \end{center}
+    \caption{Historical forms of plain and emphatic negation in Greek}
+    \label{greek-table}
+\end{table}
+There is a consistent transition of forms between the two functions: the emphatic negation of the last century or millennium becomes the plain negation of this century or millennium. Crucially, at least some of these functional cycles occur without any concomitant formal cycle.  For example, if we compare the formal complexity of forms after Early Medieval Greek, they would all be equivalent. All of them consist of a shared pre-verbal element \textgreek{den} along with a single post-verbal element. Thus, we see several bipartite forms come to express plain negation over time.
+
+So, the formal and functional cycles are often closely intertwined, but they are distinct phenomena. This means that the facts to be explained for each are also distinct.  Here we focus on the functional cycle rather than the formal cycle, which in the case of English, means that our goal will be to provide a model that explains the transition from \emph{\textcolor{red}{ne}} to \emph{\textcolor{blue}{ne...not}}. In contrast, a model of the formal cycle would need to explain both this transition and the subsequent transition from \emph{\textcolor{blue}{ne...not}}  to  \emph{\textcolor{green}{not}}. This point bears emphasis insofar as the two cycles are so often conflated. Addressing the functional cycle in isolation clarifies and lightens the explanatory burden. Here we only need to explain the single change from one form of plain negation to another.
+
+In what follows we focus on the functional cycle and its relation to a broader class of inflationary processes under which the contexts of use for a linguistic form expand over time along some evaluative scale \citep{dahl:2001}. For example, in the case of politeness, terms like \emph{lady} and \emph{gentleman} expand from the original meaning of landed gentry towards a generalized form of polite address. But, if everyone is addressed as a lady or a gentleman, then the forms cease to convey information about the actual status of the person being addressed. This is  analogous to the functional cycle. The bipartite form in English may initially be emphatic, but as it becomes obligatory it ceases to be. For any form, if it is the only one in use, then it cannot carry any special meaning. There is nothing else to be special in comparison to. As \cite{kiparsky-condoravdi:2006} rightly put it, ``to emphasize everything is to emphasize nothing.'' 
+
+While we can conceive of the functional cycle as an inflationary process, this still leaves us with the question of \emph{why} the inflation happens. In this regard, the case of politeness is a useful point of comparison. The increased use of the restricted forms of address can be understood in social terms. There are no mechanisms that prevent using \emph{lady} or \emph{gentleman} in conversation, and indeed, using it to flatter an addressee may come with distinct benefits. The increase in frequency of these forms can be understood in terms of the social impact of their use. We argue that the functional cycle can be understood in similar terms. In the next section we make clear what might be meant by \emph{emphasis}, what using emphatic forms signals about speakers, and what social consequences that information might have.
+
+
+\section{Signaling}
+\label{Signaling}
+
+The notion of emphasis is central to understanding the functional cycle as an inflationary process and has generally been defined by two functions. The first is that emphatic negation widens and strengthens negation to preclude exceptions  \citep{kadmon-landman1993any}.  That is, emphatic negation signals a stricter \emph{standard of precision} for the assertion of a proposition \citep{krifka1995polarity}. The second is that emphatic negation serves to deny or counter an expectation \citep{detges-waltereit2002, kiparsky-condoravdi:2006}. In this section we argue that these two functions can be modeled and understood as two interrelated aspects of a \emph{signaling game} \citep{lewis:1969}. We define the components of the game in the abstract, then turn to how these can model what we mean by emphasis, what information emphatic forms might signal about speakers, and what the social consequences of that information might be.
+
+A signaling game is played between a sender and a receiver, which in this case correspond to a speaker and a hearer. It has the following basic structure. First, the sender observes some private information, $t \in T$, drawn according to a prior distribution, $p$. This information is referred to as the sender's state and can be thought of as some information about the world. Next, the sender chooses a message, $m \in M$, to send to the receiver according to strategy that maps states to messages, $s : T \rightarrow M$. Finally, the receiver takes some action, $a \in A$, in response to the message according to a strategy that maps messages to actions, $r : M \rightarrow A$. Both senders and receivers have preferences over combinations of states and actions, which are represented by the utility functions, $U_S : T \times A \rightarrow \mathbb{R}$ and  $U_R : T \times A \rightarrow \mathbb{R}$, respectively. 
+
+While signaling games offer a natural model of communication, their generality requires us to be clear about what each component represents in the case of emphatic negation. First, it is crucial to specify what kind of private information a speaker might have. When it comes to negation, even if we assume that speakers abide by the maxim of quality and avoid saying what they know to be false, this still only partially captures how we actually assert and reason about propositions. As \citet[142]{austin1962} put it:
+
+\begin{quotation}
+Suppose that we confront `France is Hexagonal' with the facts, in this case, I suppose, with France, is it true or false? Well, if you like, up to a point; of course I can see what you mean by saying that it is true for certain intents and purposes. It is good enough for a top-ranking general, perhaps, but not for a geographer.
+\end{quotation}
+The felicitous use of certain forms requires more or less strict \emph{standard of precision}  on the part of speakers \citep{lewis:1979,landman1991,krifka1995polarity}. That is, if speakers use an emphatic form of negation, they are expected to have strong precision to support such an assertion. 
+
+For example, imagine a cook for  a large group of people being asked and responding to  the following questions (cf. \citealt[360]{kadmon-landman1993any}).
+
+\ex. \a. Will there be french fries tonight?
+	\b.  \label{looser} No, I don't have any potatoes.
+
+\ex.	\a. Maybe you have just a couple of potatoes that I could fry in my room.
+	\b. \label{stricter} No, I don't have any potatoes at all.
+
+The cook's response in \ref{looser} is compatible with the cook knowing that there are a few potatoes, but not enough for the whole group. The response in \ref{stricter} is only compatible with the cook knowing that there are absolutely no potatoes available. The standards of precision assumed by the plain and emphatic responses in \ref{looser} and \ref{stricter} are naturally ordered along a scale. The standard of precision for asserting \ref{stricter} entails that of \ref{looser}, but not vice versa.
+
+In what follows we take the speaker's private information to be a standard precision drawn from a scale, $T : [0,1]$. Here we take the state  $t_0$ to be the minimum standard of precision required to truthfully assert a proposition and the state  $t_1$ to be the strictest standard of precision possible. That is, we assume that speakers overwhelmingly abide by the maxim of quality, but vary within certain bounds as to how strictly they observe  it. So, we might think of $t_1$ as corresponding to the case where the speaker knows that there are absolutely no potatoes, and $t' < t_1$ being a case where the speaker knows that there are perhaps a few potatoes.  While \ref{looser} would be felicitous given $t_1$ or $t'$, \ref{stricter} would only be felicitous given $t_1$.
+
+
+Regarding the functional cycle in English, then, a speaker's strategy consists of the mapping from different standards of precision to the two forms \emph{\textcolor{red}{$m_{ne}$}} and \emph{\textcolor{blue}{$m_{ne...not}$}}. If we take emphasis to mean that a form is used with the highest standards of precision, then the notion that emphasis also serves to counter some prior expectation follows naturally. In fact, the notion of emphasis can be expressed in information-theoretic terms by comparing the  \emph{information gain}, or \emph{Kullback-Leibler divergence}, of plain and emphatic forms.
+
+% is zero exactly when the message fails to shift the hearer's beliefs from the prior probability.
+
+\begin{equation}
+     KL( m ) = \int log\left( \frac{p(t \mid m )}{p(t)}  \right)p(t \mid m ) dt
+\end{equation}
+
+% \begin{equation}
+%      KL( \textcolor{blue}{m_{ne...not}}) = \int log\left( \frac{p(t \mid \textcolor{blue}{m_{ne...not}})}{p(t)}  \right)p(t \mid  \textcolor{blue}{m_{ne...not}}) dt
+% \end{equation}
+
+If the posterior $p(t \mid \textcolor{blue}{m_{ne...not}})$ is the same as the prior $p(t)$, as is necessarily the case when a single message is used, then the information gained is zero. This follows directly from the definition of information gain, the logarithm of one is zero. This offers a precise definition of bleaching as the loss of information as a signal spreads across states. 
+
+
+% To see this, consider the prior expected value of the standard of precision, $E [t ] = \int t\cdot p(t) dt$, which is simply what hearers would expect the speaker's state to be in the absence of any additional information. We can compare this to the conditional expected value of the state of precision upon hearing the emphatic form, $E [t \mid \emph{\textcolor{blue}{$m_{ne...not}$}} ] = \int t \cdot p(t \mid  \textcolor{blue}{m_{ne...not}}) dt$. One way of 
+
+
+%What we mean when we say that \emph{\textcolor{blue}{$m_{ne...not}$}}, or any other form is emphatic is that it is used in states that correspond to the strictest standards of precision. In other words, the expected value of the speaker's state given the message, $E [t \mid \emph{\textcolor{blue}{$m_{ne...not}$}} ] = \int t \cdot p(t \mid  \textcolor{blue}{m_{ne...not}}) dt$, is particularly high relative to the prior expected value of the state, $E [t ] = \int t\cdot p(t) dt$. Note that this is simply the  intuition that emphatic negation serves to counter some prior expectation about the standard of precision. So, both functions of emphasis that have previously been noted are straightforwardly related when we define the sender's state as a scale of standards of precision.
+
+
+Now that we have defined the components of the signaling game that correspond to the speaker's information and strategies, we turn to the hearer. A hearer's strategy consists of the mapping from \emph{\textcolor{red}{$m_{ne}$}} and \emph{\textcolor{blue}{$m_{ne...not}$}} to a set of actions.
+
+
+
+A hearer's strategy consists of a set of actions taken in response to the set of messages. In what follows, we take the set of actions to constitute a scale, $A : [0,1]$. The interpretation of these actions depends on the interests of speakers and hearers. 
+
+For example, if we take the faithful transmission of information to be the sole purpose of communication, then the set of actions might be the standard of precision inferred by speakers regarding the speaker's state given a message.
+
+We model differences in the preferences of speakers and hearers using the following utility functions, modified slightly from Crawford \& Sobel's \citeyearpar{crawford-sobel:1982} seminal work on information transmission.\footnote{This formulation simply constrains the preferences of speakers and hearers to fall within the unit interval. Also, note that the bias parameter can be interpreted as the expected value of a bias conditioned probabilistically on the state, $E [ b \mid t] = \int t \cdot p(b \mid t) dt$.   So, speakers might vary in the amount of bias exhibited in any given interaction, but exhibit a certain amount of bias on average. Here we simply assume that there is a linear relationship between the state and the expected degree of speaker bias.}
+
+ \begin{equation}
+      U_S(t, a) = 1 - (a - t - (1-t)b)^2
+ \end{equation}
+ 
+ \begin{equation}
+      U_R(t, a) = 1 - (a - t)^2
+ \end{equation}
+The degree of speaker bias is captured by the parameter $b$. For the special case where $b=0$, the interests of speakers and hearers are perfectly aligned and both want the action taken by the hearer to match as closely with state of the speaker. Speakers want a fair exchange of information for status.  As $b$ grows, however, the speaker prefers higher actions on the part of hearers. That is, speakers want hearers to grant them more status for a given standard of precision than hearers would prefer.
+
+%Speakers prefer hearers to grant them more status than their standard of precision would warrant.  
+
+ 
+ 
+% Indeed, we can quantify  of the proposition being negated. The \emph{information gain}, or Kullback-Leibler divergence, from receiving the message is zero exactly when the message fails to shift the hearer's beliefs from the prior probability.
+%
+%\begin{equation}
+%     KL( \textcolor{blue}{m_{ne...not}}) = \int_0^1log\left( \frac{p(t \mid \textcolor{blue}{m_{ne...not}})}{p(t)}  \right)p(t \mid  \textcolor{blue}{m_{ne...not}}) dt
+%\end{equation}
+%If the posterior $p(t \mid \textcolor{blue}{m_2})$ is the same as the prior $p(t)$, as is necessarily the case when a single message is used, then the information gained is zero. This follows directly from the definition of information gain, the logarithm of one is zero. This offers a precise definition of bleaching as the loss of information as a signal spreads across states. 
+
+% \begin{itemize}
+% 	\item The idea is that advice-giving confers 
+% status on the giver, while advice-taking reduces it for the taker; the exchange of information for status
+% is reasonable whenever the value of the information for the hearer is sufficiently larger than its value
+% for the speaker (in terms of the immediate uses the information may be put to) to justify the exchange
+% in the eyes of both parties.
+% 	\item Speakers should compete to provide information, in
+% the hopes of the status improvement it will bring them; hearers will need to scrutinize this information
+% for plausibility, since speakers have an incentive to lie if they can get away with it (speakers who
+% monopolize their status-gaining position without conveying useful information, even if they do not
+% actively lie, will also be censured)
+% 	\item If every communication from speaker to hearer is seen in this dual role, as both informationgiving
+% and advertisement, the importance of relevance becomes clear.
+% 	\item In short, this perspective justifies largely aligned preferences most of the time, while leaving open the possibility of preference conflicts that the following sections will explore
+% \end{itemize}
+
+
+\section{Equilibrium}
+\label{Equilibrium}
+
+\begin{itemize}
+	\item We are boundedly rational agents
+	\item We are more often than not uncertain
+	\item $| E [t \mid \emph{\textcolor{red}{$m_{PPI}$}} ] - E [t]|  < d$
+	\item Why don't we see positive polarity items going through cycles?
+	\item PPIs pick out an analogously small portion of the space
+	\item scale-reversing contexts (fauconnier)
+	\item But, the end of the scale is different
+	\item It's less "informative" to pick out that end of the scale
+	\item Because 
+	\item This suggests a skewed prior, B(1,$\beta$)
+\end{itemize}
+
+
+% The set of speaker strategies is all potential mappings from the unit interval to a discrete set $S : [0,1] \rightarrow M$. This is problematic given that the domain is uncountable. To simplify things we consider the following condensed representation. Let $\mathcal{P}_n(T)$ be a partition of the state space into $n$ equal length subintervals $t_0 = 0 < t_1 < ... < t_{n-1} < t_n = 1$.  For each properly defined subinterval, $(t_{i-1},t_i)$ the sender uses the message $m_i$. A speaker's strategy is then a function from this partition to messages $S : [\mathcal{P}_n(T) \rightarrow M]$.  Intuitively, this is simply a way of carving up the state space into discrete contiguous regions and using those regions to determine which signal to send. For example, consider the case of two messages $\mathcal{P}_2(T)$, where $\textcolor{red}{m_1}$ and $\textcolor{blue}{m_2}$ correspond to \textcolor{red}{\emph{ne}} and \textcolor{blue}{\emph{ne...not}} respectively. For $t \in (0, t_1)$ a sender will use  \textcolor{red}{\emph{ne}} and for $t \in (t_1, 1)$ a sender will use \textcolor{blue}{\emph{ne...not}}.
+
+
+% and \citet[258]{israel2011}
+
+% \begin{itemize}
+% \item Receiver's split the partitions with Bayesian estimators (as per utility function)
+% \item Which of these is evolutionarily stable?
+% \item If partially-separating equilibrium exists, then it is unique!
+% \item If bias is too large, then no information is transmitted
+% \item Information that negation was used is transmitted, but information about \emph{how} it was used was not!
+% \end{itemize}
+% 
+
+% Now that we have defined the components of the game, we turn to analyzing its properties. Determining the equilibria of the game we described will allow us to address several questions about how signals are used in the functional cycle. Broadly speaking, we want to know two things. First, we want to understand the relationship between senders' bias towards overestimating activation and the use of signals at equilibrium. In particular, we want to know how large this bias can be while still allowing for multiple forms to be used at equilibrium. Second, we want to know whether particular equilibria constitute evolutionarily stable strategies. If so, we want to know the strategies that are evolutionarily stable. If not, we want to know what strategies could invade the population and disturb an equilibrium. Broadly speaking, this amounts to determining the conditions for the functional cycle to occur.  We begin by defining speaker and hearer strategies, the expected utility of different strategies, and then determine the evolutionarily stable strategies of the game. 
+
+% The set of speaker strategies is all potential mappings from the unit interval to a discrete set $S : [0,1] \rightarrow M$. This is problematic given that the domain is uncountable. To simplify things we consider the following condensed representation. Let $\mathcal{P}_n(T)$ be a partition of the state space into $n$ equal length subintervals $t_0 = 0 < t_1 < ... < t_{n-1} < t_n = 1$.  For each properly defined subinterval, $(t_{i-1},t_i)$ the sender uses the message $m_i$. A speaker's strategy is then a function from this partition to messages $S : [\mathcal{P}_n(T) \rightarrow M]$.  Intuitively, this is simply a way of carving up the state space into discrete contiguous regions and using those regions to determine which signal to send. For example, consider the case of two messages $\mathcal{P}_2(T)$, where $\textcolor{red}{m_1}$ and $\textcolor{blue}{m_2}$ correspond to \textcolor{red}{\emph{ne}} and \textcolor{blue}{\emph{ne...not}} respectively. For $t \in (0, t_1)$ a sender will use  \textcolor{red}{\emph{ne}} and for $t \in (t_1, 1)$ a sender will use \textcolor{blue}{\emph{ne...not}}.
+
+% Now that we have defined the set of speaker and hearer strategies, we can ask what strategies constitute evolutionarily stable strategies. Given that signaling games are asymmetric, this amounts to identifying the strict Nash equilibria of the game. This can be done by determining what strategies jointly maximize the expected utilities of speakers and hearers.
+
+\begin{equation}
+     E[U_S(s, r)] = \int_T \left( 1 -(r(s(t)) - t - (1-t)b)^2 \right)p(t)dt
+\end{equation}
+
+\begin{equation}
+      E[U_R(s, r)] = \int_T \left( 1 -(r(s(t)) - t)^2 \right) p(t) dt
+\end{equation}
+
+% $r(s(t))$ is the receiver's respond to the sender's message and yields an action, which determines the utility for both sender and receiver given a state.
+
+\citep{selten:1980}
+
+To calculate the maxima of the expected utility functions, let $\langle s^*, r^* \rangle$ be an equilibrium strategy profile. In this case, the speaker strategy is defined by $s^*((0, t_1^*)) = \textcolor{red}{m_1}$ and $s^*((t_1^*, 1)) = \textcolor{blue}{m_2}$. Likewise, the hearer strategy is defined by $r^*(\textcolor{red}{m_1}) = \textcolor{red}{a_1^*}$ and $r^*(\textcolor{blue}{m_2}) = \textcolor{blue}{a_2^*}$.  We can determine the evolutionarily stable strategies by jointly maximizing speaker and hearer expected utility. That is, we solve a system of partial differential equations for $t_1^*$, $\textcolor{red}{a_1^*}$ and $\textcolor{blue}{a_2^*}$. For any amount of bias, the maximizing values are shown in Figure \ref{ESS-beta}.\footnote{See the Appendix for the full calculations of the solution.} Along the horizontal axis is the amount of speaker bias, the vertical axis represents the point at which speakers partition the state space and the actions of hearers in response to the forms. For any value of the speaker bias $b$, the solid black line represents the point at which speakers partition the state space $t_1^*$ and the dashed lines represent hearer responses to the different messages, $\textcolor{red}{a_1^*}$ and $\textcolor{blue}{a_2^*}$.
+
+\begin{figure}
+\begin{center}
+	\includegraphics[width=.8\textwidth]{ESS-beta.pdf}
+	\caption{Equilibrium solution for two messages for values of bias}
+	\label{ESS-beta}
+\end{center}
+\end{figure}
+
+We are now in a position to answer our first question regarding the relationship between speaker bias and the use of different forms at equilibrium. Namely, if speakers are too biased when it comes to keeping track of common versus private knowledge then only a single message can be used in equilibrium. For example, we can read off of Figure \ref{sol2-beta} that if $b > \frac{1}{6}$ then only $\textcolor{blue}{m_2}$ will be used in equilibrium. When speaker bias is sufficiently large this form carries no information about the activation of the proposition being negated. The \emph{information gain}, or Kullback-Leibler divergence, from receiving the message is zero exactly when the message fails to shift the hearer's beliefs from the prior probability.
+
+\begin{equation}
+     KL( \textcolor{blue}{m_{ne...not}}) = \int log\left( \frac{p(t \mid \textcolor{blue}{m_{ne...not}})}{p(t)}  \right)p(t \mid  \textcolor{blue}{m_{ne...not}}) dt
+\end{equation}
+If the posterior $p(t \mid \textcolor{blue}{m_{ne...not}})$ is the same as the prior $p(t)$, as is necessarily the case when a single message is used, then the information gained is zero. This follows directly from the definition of information gain, the logarithm of one is zero. This offers a precise definition of bleaching as the loss of information as a signal spreads across states. 
+
+To see why this is the case, suppose that the amount of bias only allows for a single form to be used in equilibrium, call it $\textcolor{red}{m_1}$. Now, suppose further that there is an additional form that is not used in equilibrium, $\textcolor{blue}{m_2}$. The action that hearers would take in response to this unused message can vary without affecting the expected utility of speakers or hearers. This means that the equilibrium is not strict, and therefore is not evolutionarily stable.  In particular, a single-form equilibrium can be disturbed by the introduction of a new message, it is not \emph{neologism-proof} \citep{farrell:1993}. For example, suppose that a new form is only used for high degrees of activation, and that hearers respond by inferring a high degree of activation. Given speakers' bias, there will be additional states that speakers think warrant using the new form. In response to this increase, hearers will infer a lower degree of activation, meaning additional states will be used by speakers, and so on. This holds for any pair of messages $m_i$ and $m_{i+1}$. 
+
+Importantly, this is just the functional cycle as we have been describing it.  So, even though two forms may not be stable for a sufficiently large degree of speaker bias, a single form is never evolutionarily stable. The functional cycle can always be set in motion by the introduction of the appropriately conditioned form. This means that just as \emph{\textcolor{red}{ne}} can be pushed out by \emph{\textcolor{blue}{ne...not}}, so too could \emph{\textcolor{blue}{ne...not}} be pushed out with the introduction of the right new form, one that is initially restricted to high degrees of activation.
+
+
+
+\section{Dynamics}
+\label{Dynamics}
+
+\citep{borgers-sarin1997}
+
+% \begin{itemize}
+% \item What are the general forms of the equations for senders and receivers?
+% \item What are the conditions for stability? (make main point here, include details in appendix)
+% \item What happens when we generalize this to arbitrarily many states?
+% \item Does this differ from the concerns of infinite strategy spaces? (Oechssler, Riedel, Jager)
+% \item Simulations: include mutation, note that it allows for the introduction of new signals
+% \item Simulations: show the trajectory of signals and response
+% \end{itemize}
+
+While we can reason about how speakers and hearers might react to the introduction of a new form, this kind of equilibrium reasoning is essentially static. That is, it allows us to reason about what would happen if we started at a particular state, but not whether we will ever reach that state in the first place. More importantly, it does not allow us to examine how a population evolves from any starting state in general. To understand how speakers and hearers change over time, we must posit a process that underlies how speakers and hearers interact and respond to each other. Doing so will allow us to examine how different degrees of speaker bias impact the trajectory of meaning. First, we discuss the replicator dynamics as an appropriate evolutionary game dynamics for studying changes in meaning.  Then, we simulate trajectories of a population interacting over time. 
+
+%Second, we define the necessary components for the replicator dynamics of the game described in the previous section.
+
+The replicator dynamics were originally introduced as an explicitly dynamic model of biological replication, but have since been shown to have deep connections with some of the most widely-studied models of learning. In particular, \cite{borgers-sarin1997} prove that the expected behavior of agents playing an asymmetric game while learning according to a \emph{linear reward-inaction} scheme \citep{bush-mosteller1955} is equivalent to the asymmetric replicator dynamics if the agents interact frequently and change their behavior slowly. That is, if individuals tend to do things that are more successful, then their expected behavior can be modeled by the replicator dynamics.
+
+%If we assume that speakers and hearers learn in this manner, there are a few conceptual clarifications to be made to justify the use of the replicator dynamics in modeling the functional cycle. First, we need to be sure that speakers and hearers interact frequently and change their behavior slowly. Both of these would seem to follow from the overall frequency of negation. Given that negation is one of the most frequently used forms in any language, it is safe to assume that speakers and hearers  interact frequently and do not dramatically alter their use or interpretation of negation from one sentence to the next.  Second, we assume that each individual acts as a speaker and hearer, but cannot introspectively reason about the impact of one on the other. That is, individuals cannot use their behavior as speakers to change their own behavior as hearers, nor vice versa. Third, while the replicator dynamics can be used as a model of individual learning, we are interested in how the population as a whole changes. However, given that the \emph{expected} behavior of individuals is equivalent to the replicator dynamics under this kind of learning, then the expected behavior of a population of individuals should be as well. That is, if averaging at the individual level yields the replicator dynamics, then so should averaging over averages.  This is akin to treating the populations of speakers and hearers \emph{as if} they were individuals. 
+
+%We simulate the change in the proportion of the different forms over time for a population evolving according to the replicator dynamics from the same starting conditions.\footnote{Here we use the discrete-time replicator dynamics for computational tractability, whereas the results presented by \cite{borgers-sarin1997} hold for the continuous-time replicator dynamics. While the two dynamics are substantially similar for our purposes, we leave a comparison for future work. Note that we also discretize the set of states and actions for speakers and hearers, respectively. That is, for some $n$, we treat the set of states $T : \{t_0, ..., t_n \}$ and actions $A : \{a_o, ..., a_n \}$, where $t_i = a_i = \frac{i}{n}$. See Appendix B for full details of the numerical simulations.}  
+
+
+Defining the stage game and the evolutionary dynamics allowed us to investigate the effect of speaker bias on the functional cycle in the abstract, but we are really interested in how the resulting model can be used to explain the actual historical trajectory of negation in a concrete case. In particular, we are interested in what happens when we fit the model to data from the history of negation in English. First, we describe the data that we fit the model to. Second, we define the parameters of the dynamics that we fit. Finally, we evaluate these parameters in light of the experimental data presented above.
+
+The data we use are drawn from the PPCME2 \citep{ppcme2}. All tokens used are negative declaratives, excluding cases of contracted negation as well as cases that appear to be constituent negation.\footnote{We model the data used here after \cite{wallage2008}, which makes a compelling argument for treating contracted negation, among other cases, separately. Many thanks go to Aaron Ecay for sharing the code for generating the queries.} Each circle represents tokens in a given year. The size of the circle represents the number of tokens. The height of the circle represents the proportion of those instances that are a particular form. Locally-weighted regression lines are fit to these proportions.  We see the transition from \textit{\color{red} ne} to \textit{\color{blue} ne...not} starting around the 12th century, followed closely by the transition from \textit{\color{blue} ne...not} to \textit{\color{green} not} in the 14th century. 
+
+
+\begin{figure}
+\centering
+     \includegraphics[width=.75\textwidth]{neg-year-lines.pdf}
+\caption{Proportion of \textit{\color{red} ne}, \textit{\color{blue} ne...not}, and \textit{\color{green} not}  in Negative Declaratives}
+\label{neg-three-plot}
+\end{figure}
+
+Now, given that we are interested in the functional cycle, we care about the transition from \textit{\color{red} ne} to \textit{\color{blue} ne...not}. That is, we care about an incoming emphatic form displacing an incumbent form. So, while the subsequent rise of \textit{\color{green} not} represents the second transition in the formal cycle, it is not a part of the functional cycle. Here we treat tokens of \textit{\color{green} not} as if they were tokens of  \textit{\color{blue} ne...not}.  This avoids the problem of excluding these tokens and attributing meaning to small fluctuations between  \textit{\color{red} ne} and \textit{\color{blue} ne...not} after the middle of the fourteenth century.  
+
+More importantly, it captures the contingency of the second transition of the formal cycle to purely post-verbal negation.  That is, the rise of \textit{\color{green} not} is not a part of the functional cycle, nor is it a necessary and immediate consequence of the functional cycle. We only need to compare the history of negation in French where the embracing form goes to completion before being eventually replaced by the post-verbal form. Taking this route allows us apply the same model across languages without regard to subsequent contingent developments. The results of doing so are shown in Figure \ref{lump-plot1}.
+
+
+%How should we deal with \textit{\color{green} not} in our analysis? There are two possibilities. First, we could ignore \textit{\color{green} not} and simply fit the model to the proportions of \textit{\color{red} ne} and \textit{\color{blue} ne...not}. The problem with doing so is that this attributes too much to small fluctuations in the proportions of \textit{\color{red} ne} and \textit{\color{blue} ne...not} even if those fluctuations are not meaningful in any sense relevant to the model. It is unlikely that small changes in the 15th century are something that we want to model.
+
+
+\begin{figure}
+\centering
+     \includegraphics[width=.8\textwidth]{lump-plot1.pdf}
+\caption{Proportion of \textit{\color{blue} ne...not} and \textit{\color{green} not}  versus  \textit{\color{red}  ne} over time}
+\label{lump-plot1}
+\end{figure}
+
+Taking the trajectory of forms in Figure \ref{lump-plot1} as the data we want to fit our model to, we need to specify the parameters of the model to be fit. In particular, we need to define the initial state of how speakers use the different forms and how hearers respond to them. In fact, we have quite a bit of information regarding what the initial state of the functional cycle actually is. That is, we know that \textit{\color{blue} ne...not}   is fairly infrequent and largely restricted to high degrees of activation. Likewise, we know that hearers' response to \textit{\color{blue} ne...not}  is also largely restricted to actions corresponding to high degrees of activation. We can translate this information into conditions on the initial states of the speaker and hearer populations.
+
+Regarding speakers we assume that both forms have a particular meaning, which is captured by conditional probability of states given a form. Namely, \textit{\color{red} ne} is the default form and does not carry any information above and beyond the prior, it roughly satisfies the following conditional distribution $p(t \mid \textcolor{red}{ne}) \sim \mathcal B (1, 2)$. In contrast, \textit{\color{blue} ne...not} is overwhelmingly used in states with high degrees of activation, that it satisfies the following conditional distribution $p(t \mid \textcolor{blue}{ne...not}) \sim \mathcal{B}(\alpha, 1)$. The larger $\alpha$ is, the more skewed towards high degrees of activation is \textit{\color{blue} ne...not}. Note that these two distributions along with the prior determine the initial proportion of \emph{\textcolor{blue}{ne...not}}. So, we only have a single parameter $\alpha$ to fit for the initial state of speakers.\footnote{Here we use the discrete-time replicator dynamics for computational tractability, whereas the results presented by \cite{borgers-sarin1997} hold for the continuous-time replicator dynamics. While the two dynamics are substantially similar for our purposes, we leave a comparison for future work. Note that we also discretize the set of states and actions for speakers and hearers, respectively. That is, for some $n$, we treat the set of states $T : \{t_0, ..., t_n \}$ and actions $A : \{a_o, ..., a_n \}$, where $t_i = a_i = \frac{i}{n}$. See Appendix B for full details of the numerical simulations.}  
+
+%Moreover, if the initial proportion of the incoming form is sufficiently small then the incumbent form necessarily approximates the prior distribution.
+
+Regarding hearers, we assume that the expected value of the responses to both forms correspond to the expected value of the conditional probability of states given the form. Intuitively, this corresponds to hearers starting off with a fairly accurate responses to the two forms. For \textit{\color{red} ne} this is satisfied by any distribution $\mathcal{B}(\alpha, \beta)$ such that $\alpha = \frac{1}{2}\beta$, which has an expected value $\frac{\frac{1}{2}\beta}{\frac{1}{2}\beta + \beta} = \frac{1}{3}$. Note that is the same as the expected value of the conditional probability of the state given the message $p(t \mid \textcolor{red}{ne}) \sim \mathcal{B}(1, 2)$.  So we take the conditional probability of actions given \textit{\color{red} ne}   to be $p(a \mid \textcolor{red}{ne}) \sim \mathcal{B}(\frac{1}{2}\beta_1, \beta_1)$. All that $\beta_1$ does is to determine how concentrated the action is around the expected value.  For \emph{\textcolor{blue}{ne...not}} let $\gamma = E[t \mid \textcolor{blue}{ne...not}]$, then this is satisfied by any distribution $\mathcal{B}(\alpha, \beta)$ such that $\alpha = \left( \frac{\gamma}{1 - \gamma} \right)\beta$, so we take the conditional probability of an action to be $p(a \mid \textcolor{blue}{ne...not}) \sim \mathcal{B}(\left( \frac{\gamma}{1 - \gamma} \right)\beta_2, \beta_2)$.  Again $\beta_2$ determines how concentrated the action is around the expected value. So, we have two parameters $\beta_1$ and $\beta_2$ to fit for the initial state of hearers.
+
+%The last thing to note before fitting the model is the notion of time. That is, the replicator dynamics specify how populations change from one point in time to the next, but how these abstract units correspond to days or years is unspecified. In what follows we treat each of these abstract time units as a year, but leave open the possibility that another proportion may be more appropriate. One option would be to treat the ratio between years and abstract time units as another parameter to be fit in the model, but for now we leave this as an avenue for future research.
+
+We fit the initial state parameters and bias parameter to the data.\footnote{See Appendix B for the full details of the starting states and the resulting fit.} We begin by visualizing the overall trajectory of the incoming form, then turn to the change in the meaning of the two forms over time.  Figure \ref{m2-sol} shows the predicted proportion of \textit{\color{blue} ne...not} over historical time for the fitted model with the bias parameter $\hat{b} = 0.49132877$. Perhaps more importantly, we can actually inspect the inner workings of the model as they relate to the functional cycle.
+
+\begin{figure}
+\centering
+     \includegraphics[width=.8\textwidth]{m2.pdf}
+\caption{Predicted probability of \textit{\color{blue} ne...not} over time for fitted model of functional cycle.}
+\label{m2-sol}
+\end{figure}
+
+In particular, we can examine how the information carried by the two forms changes over time. We gain insight into the functional cycle by considering how the meaning of \emph{\textcolor{blue}{ne...not}} changes over time as in Figure \ref{m2-meaning}. The horizontal axis represents states and vertical axis represents the conditional probability of states given that \emph{\textcolor{blue}{ne...not}} was used. We show this conditional probability at various points as the functional cycle proceeds. The dashed line indicates the prior probability distribution over states. The initial meaning of the incoming emphatic form is represented by the curve with the most rightwards skew. This indicates the point at which the incoming emphatic form carries the most information and is thus the most emphatic.  But, as time goes on, \emph{\textcolor{blue}{ne...not}} spreads to more and more degrees of activation as it the form increases in frequency. We represent this with subsequent distributions that move more and more towards the prior distribution. As they do so, the form loses its emphasis, as indicated by the thickness of the line. When \emph{\textcolor{blue}{ne...not}} is the only form, it carries no information about activation beyond the prior. Visually speaking, at this point its emphasis has faded entirely.
+
+
+\begin{figure}
+\centering
+     \includegraphics[width=.8\textwidth]{pt-m2.pdf}
+\caption{The emphatic form over time as given by the conditional probability of states given \textit{\color{blue} ne...not}, where dashed line indicates prior probability distribution.}
+\label{m2-meaning}
+\end{figure}
+
+%We also gain insight in to the functional cycle by comparing the relative meaning of both forms. Comparing the meaning of \emph{\textcolor{red}{ne}} at the outset of the cycle and \emph{\textcolor{blue}{ne...not}} at the end of the cycle is particularly informative. Figure \ref{push-chain} emphatically demonstrates the dynamics of the push-chain scenario. At the beginning of the cycle in 1125 CE,  \emph{\textcolor{red}{ne}} carries no information about the degree of activation, it coincides with the prior as indicated by the dashed line.  In contrast, \emph{\textcolor{blue}{ne...not}} is overwhelmingly restricted to cases where the proposition being negated has a high degree of activation. Both of these facts are shown in the top panel of Figure \ref{push-chain}. But, one hundred years later, \emph{\textcolor{blue}{ne...not}} has expanded to more states as it increases in frequency and \emph{\textcolor{red}{ne}} is pushed to lower and lower degrees of activation. This is shown in the second panel of Figure \ref{push-chain}. As the functional cycle proceeds, the old form is pushed lower and lower down the scale. Eventually, the incoming form has displaced the incumbent form and ceases to carry any information about the degree of activation.
+%
+%\begin{figure}
+%\centering
+%     \includegraphics[width=\textwidth]{push-chain.pdf}
+%\caption{The push-chain of the functional cycle given by the conditional probability of states given form at various points in time, where dashed line indicates prior probability.}
+%\label{push-chain}
+%\end{figure}
+
+%So, the dynamics of the fitted model match our theoretical conceptions of the functional cycle as a kind of push chain. The incoming form pushes the incumbent form out, eventually taking its place and losing its emphasis. Given that the driving force behind this change was posited to be speakers' bias to overestimate activation, it is important to take a moment to evaluate the value of the fitted bias parameter, $\hat{b}$. Given that the incoming form replaces the incumbent form, we would expect from our equilibrium analysis that at the very least $\hat{b} > \frac{1}{6}$, but this still leaves a fair amount of room for the parameter to vary. In fact the fitted value $\hat{b}=.4913287$ is well above this minimum. 
+
+
+%\section{Discussion}
+%\label{Discussion}
+
+% \begin{itemize}
+% \item Alternative explanations for cycle (Franke's comments)
+% \item What about salience?
+% \item How do we define salience?
+% \item (1) Salience is preference for new/unexpected things
+% \item But there are always newer/less expected forms of negation
+% \item Should we expect a continual cycle without end? No
+% \item (2) Salience is a preference for unexpected* things
+% \item unexpected* = unexpected but not too unexpected
+% \item New forms have to hit sweet spot between
+% \item (3) Salience is wanting to do what "the cool kids are doing" (coordination on new convention)
+% \item Negation is very frequent: should we expect coordination quickly (Niyogi, Coalescence)
+% %\item Less frequent affective terms, "swell", "groovy", "tubular", come and go more quickly
+% %\item Could be that negation has truth-conditional effects, so is slowed down, but we need an explanation for this
+% %\item What about "really" and "very" (Traugott, handbook), these are intensifiers that have presumably also been bleached of some of their emphasis
+% %\item How quickly did this happen? What does this mean for negation?
+% \end{itemize}
+
+
+%\footnote{Note that this does not preclude other forms of negation. There are always means for augmenting plain negation to make it emphatic (e.g. `at all', `ever', see \citet[258]{israel2011} and \citet{horn:1989} for incomplete but substantial lists). Crucially the form that is introduced is \emph{more} emphatic than plain negation, but not the only such form.} 
+
+
+\section{Conclusion}
+\label{Conclusion}
+
+
+% \appendix
+% 
+% \section{Equilibrium}
+% 
+% \section{Dynamics}
+
+\bibliography{ahern}
+
+
+%\begin{addresses}
+%  \begin{address}
+%    Christopher Ahern \\
+%    University of Pennsylvania\\
+%    Department of Linguistics\\
+%    619 Williams Hall \\
+%    Philadelphia, PA \\
+%    \email{cahern@ling.upenn.edu}
+%  \end{address}
+%  \begin{address}
+%    Robin Clark \\
+%    University of Pennsylvania\\
+%    Department of Linguistics\\
+%    619 Williams Hall \\
+%    Philadelphia, PA\\
+%    \email{rclark@ling.upenn.edu}
+%  \end{address}
+%  % repeat if needed.
+%\end{addresses}
+
+\end{document}
