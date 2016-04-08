@@ -1,6 +1,5 @@
-local
+local/*
 data/corpus/*
-data/digs15-negative-priming/*
 data/digs15-negative-priming
 .*.swp
 /ahern.bib
