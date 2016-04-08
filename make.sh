@@ -1,13 +1,9 @@
 #!/bin/bash
 
-# 
+# Data
 
-# Run corpus search
+# Code
 
-# parse corpus search output
-
-# Run ipython notebook
-
-# Compile latex
+# Document
 
 # etc
