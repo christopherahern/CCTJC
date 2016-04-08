@@ -22,7 +22,8 @@ to generate and process the data.
 
 ## Code
 
-To run the code either download the files as a ZIP, or clone the repository:
+To run the code either download the files as a [ZIP](https://github.com/christopherahern/SEMPRAG/archive/master.zip),
+ or clone the repository:
 
     git clone https://github.com/christopherahern/SEMPRAG.git
 
@@ -56,7 +57,7 @@ If you want to cite this paper, please use the following:
 If you reference the results of this paper, please also cite [the corpus](https://www.ling.upenn.edu/hist-corpora/citing-corpora.html)
  used:
 
-> Kroch, Anthony, and Ann Taylor. 2000. The Penn-Helsinki Parsed Corpus of Middle English (PPCME2). Department of Linguistics, University of Pennsylvania. CD-ROM, second edition, release 4 (http://www.ling.upenn.edu/ppche-release-2016/PPCME2-RELEASE-4). 
+> Kroch, Anthony, and Ann Taylor. 2000. The Penn-Helsinki Parsed Corpus of Middle English (PPCME2). Department of Linguistics, University of Pennsylvania. CD-ROM, second edition, release 4. 
 
 # Comments
 
