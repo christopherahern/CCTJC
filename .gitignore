@@ -1,4 +1,5 @@
 local/*
+cover
 data/corpus/*
 data/digs15-negative-priming
 .*.swp
