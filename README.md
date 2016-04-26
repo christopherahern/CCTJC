@@ -1,6 +1,6 @@
 # Description
 
-This repository contains the source code for the paper entitle 
+This repository contains the source code for the paper entitled 
 "Conflict, Cheap Talk, and Jespersen's Cycle" submitted to the journal
 Semantics & Pragmatics by [Christopher Ahern](http://christopherahern.github.io/)
  and [Robin Clark](http://www.ling.upenn.edu/~rclark/Site/Welcome.html).
