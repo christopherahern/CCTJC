@@ -27,14 +27,15 @@ To run the code either download the files as a [ZIP](https://github.com/christop
 
     git clone https://github.com/christopherahern/SEMPRAG.git
 
-For running the code we recommend installing the [Anaconda](https://www.continuum.io/downloads)
+The output of the notebook can also be viewed [here](http://nbviewer.jupyter.org/github/christopherahern/SEMPRAG/blob/master/src/Ahern-Clark-SP-2016-Appendix.ipynb) independently of installing any additional software. 
+
+
+For running the code interactively we recommend installing the [Anaconda](https://www.continuum.io/downloads)
 python distribution. To run the Jupyter notebook, run the following in `src/`:
 
     ipython notebook
 
-From there you can run the analysis in order and it will print results. 
-
-The output of the notebook can also be viewed [here](http://nbviewer.jupyter.org/github/christopherahern/SEMPRAG/blob/master/src/Ahern-Clark-SP-2016-Appendix.ipynb) independently of installing any additional software. 
+From there you can execute commands in order. 
 
 In the future we plan to:
 * [Convert notebook to python and R scripts](https://github.com/christopherahern/SEMPRAG/issues/1)
