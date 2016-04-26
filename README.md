@@ -11,7 +11,7 @@ Semantics & Pragmatics by [Christopher Ahern](http://christopherahern.github.io/
 ## Data
 
 To obtain the data used in this analysis, clone 
-[this repository](https://github.com/christopherahern/digs15-negative-priming.git)
+[this repository](https://github.com/christopherahern/jespersens-cycle-middle-english.git)
 and follow the instructions listed there. Many thanks to 
 [Aaron Ecay](http://aaronecay.com/) and
 [Meredith Tamminga](http://meredithtamminga.com/) for sharing the queries and code 
