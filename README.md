@@ -27,7 +27,7 @@ To run the code either download the files as a [ZIP](https://github.com/christop
 
     git clone https://github.com/christopherahern/SEMPRAG.git
 
-The output of the notebook [can also be viewed here](http://nbviewer.jupyter.org/github/christopherahern/SEMPRAG/blob/master/src/Ahern-Clark-SP-2016-Appendix.ipynb) without installing any additional software.
+The output of the notebook [can also be viewed here](http://nbviewer.jupyter.org/github/christopherahern/SEMPRAG/blob/master/src/Ahern-Clark-SP-2017-Appendix.ipynb) without installing any additional software.
 
 
 For running the code interactively we recommend installing the [Anaconda](https://www.continuum.io/downloads)
@@ -37,6 +37,10 @@ python distribution. To run the Jupyter notebook, run the following in `src/`:
 
 From there you can execute commands in order.
 
+The analysis can also be performed by running the following in `src/`:
+
+    Rscript Ahern-Clark-SP-2017.R
+    py Ahern-Clark-SP-2017.py
 
 # Document
 
@@ -49,7 +53,7 @@ To compile the document, run the following in `tex/`:
 
 If you want to cite this paper, please use the following:
 
-> Ahern, Christopher and Robin Clark. Conflict, Cheap Talk, and Jespersen's Cycle. 2016
+> Ahern, Christopher and Robin Clark. Conflict, Cheap Talk, and Jespersen's Cycle. 2017
 
 If you reference the results of this paper, please also cite [the corpus](https://www.ling.upenn.edu/hist-corpora/citing-corpora.html)
  used:
