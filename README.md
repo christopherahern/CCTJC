@@ -22,12 +22,12 @@ to generate and process the data.
 
 ## Code
 
-To run the code either download the files as a [ZIP](https://github.com/christopherahern/SEMPRAG/archive/master.zip),
+To run the code either download the files as a [ZIP](https://github.com/christopherahern/CCTJC/archive/master.zip),
  or clone the repository:
 
-    git clone https://github.com/christopherahern/SEMPRAG.git
+    git clone https://github.com/christopherahern/CCTJC.git
 
-The output of the notebook [can also be viewed here](http://nbviewer.jupyter.org/github/christopherahern/SEMPRAG/blob/master/src/Ahern-Clark-SP-2017-Appendix.ipynb) without installing any additional software.
+The output of the notebook [can also be viewed here](http://nbviewer.jupyter.org/github/christopherahern/CCTJC/blob/master/src/Ahern-Clark-SP-2017-Appendix.ipynb) without installing any additional software.
 
 
 For running the code interactively we recommend installing the [Anaconda](https://www.continuum.io/downloads)
@@ -64,4 +64,4 @@ If you reference the results of this paper, please also cite [the corpus](https:
 # Comments
 
 If you have comments or questions about anything, feel free to email christopher.ahern@gmail.com
-or [create an issue](https://github.com/christopherahern/SEMPRAG/issues) on github.
+or [create an issue](https://github.com/christopherahern/CCTJC/issues) on github.
