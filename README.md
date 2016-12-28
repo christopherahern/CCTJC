@@ -46,7 +46,7 @@ The analysis can also be performed by running the following in `src/`:
 
 To compile the document, run the following in `tex/`:
 
-    pdflatex Ahern-Clark-SP-2016.tex
+    pdflatex Ahern-Clark-SP-2017.tex
 
 
 # Citation
