@@ -4,7 +4,6 @@ data/corpus/*
 data/digs15-negative-priming
 .*.swp
 /ahern.bib
-tex/*.pdf
 tex/*.aux
 tex/*.log
 tex/*.blg
