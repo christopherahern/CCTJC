@@ -1,4 +1,4 @@
-\begin{thebibliography}{63}
+\begin{thebibliography}{65}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{}
@@ -138,7 +138,7 @@ Enke, Dankmar, Roland Muhlenbernd \& Igor Yanovich. 2016.
   Barcelo-Coblijn, Olga Feher \& Tessa Verhoef (eds.), \emph{The evolution of
   language: Proceedings of the eleventh international conference on the
   evolution of language}, 97--105.
-\newblock \doi{doi:10.17617/2.2248195}.
+\newblock \doi{10.17617/2.2248195}.
 
 \bibitem[{Farrell(1993)}]{farrell:1993}
 Farrell, Joseph. 1993.
@@ -230,6 +230,20 @@ Jones, Taylor. 2015{\natexlab{b}}.
   regions using “black twitter”.
 \newblock \emph{American Speech} 90(4). 403--440.
 \newblock \doi{10.1215/00031283-3442117}.
+
+\bibitem[{Kimura(1955{\natexlab{a}})}]{kimura1955a}
+Kimura, Motoo. 1955{\natexlab{a}}.
+\newblock Solution of a process of random genetic drift with a continuous
+  model.
+\newblock \emph{Proceedings of the National Academy of Sciences of the United
+  States of America} 41(3). 144.
+
+\bibitem[{Kimura(1955{\natexlab{b}})}]{kimura1955b}
+Kimura, Motoo. 1955{\natexlab{b}}.
+\newblock Stochastic processes and distribution of gene frequencies under
+  natural selection.
+\newblock In \emph{Cold spring harbor symposia on quantitative biology},
+  vol.~20, 33--53. Cold Spring Harbor Laboratory Press.
 
 \bibitem[{Kimura(1968)}]{kimura1968}
 Kimura, Motoo. 1968.
