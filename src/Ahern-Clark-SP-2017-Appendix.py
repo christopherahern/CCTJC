@@ -179,22 +179,30 @@ plt.show()
 
 # Before moving on to the analysis, we note that the strategies we have defined are the only ones that can constitute evolutionarily stable strategies. For example, one might wonder whether a mixed speaker strategy $\sigma = \sum_i p_i s_i$ or receiver strategy $\rho = \sum_i p_i r_i$ could be relevant to the analysis.
 #
-# First, Jager et al. (2011, Lemma 2) suffices to show that mixed hearer strategies cannot ever be part of a strict Nash equilibria.  It remains to show that mixed strategies for speakers cannot be either.  To do so, we show that it in all states it is always strictly worse to mix signals. First, fix a state $t$. Now, note that the function $s \rightarrow U_S(s, r) = 1 - (a - t - (1-t)b)^2$ is strictly concave. Further, note that a mixed speaker strategy $\sigma$ and a pure hearer strategy $r$ determines a probability $p_i$ that an action $a_i$ will be taken. So, the utility of a mixed strategy in a given state is the following:
+# First, we define a mixed speaker strategy $\sigma$ as a probability measure over speaker strategies where $p_i$ is the probability of strategy $s_i$, such that $\int p_i dp_i = 1$. Now, we fix a state $t$ and note that for a pair of pure sender and receiver strategies the function $f : a \rightarrow U_s(t, a) = 1 - (r(s(t)) - t - (1-t)b)^2$, is strictly concave.
+#
+# Second, note that for a fixed state, a mixed speaker strategy $\sigma$, and a pure hearer strategy, the probability of an action being taken is determined by the probability a message being sent. Let $g_k(t, s)$ be an indicator function that is equal to one when $s$ sends message $m_k$ in state $t$, and zero otherwise. The probability that an action $a_k$ will be taken in a fixed state $t$, given a mixed speaker strategy $\sigma$ and a pure hearer strategy $r$, is the following.
 #
 # \begin{equation}
-# 	U_S(\sigma, r) = \sum_i p_i \left( 1 - (a_i - t - (1-t)b)^2\right)
+#     \gamma_k = \int g_k(t, s_i) p_i dp_i
 # \end{equation}
-# By Jensen's inequality, for any concave function we have the following:
+#
+# Thus, the utility of a mixed speaker strategy for a fixed state and pure hearer strategy is the following.
 #
 # \begin{equation}
-# 	\sum_i p_i \left(1 - (a_i - t - (1-t)b)^2\right) \leq  1 - \left(\left(\sum_i p_i a_i\right) - t - (1-t)b\right)^2
+# 	E[f(a)] = \sum_i \gamma_i \left( 1 - (a_i - t - (1-t)b)^2\right)
 # \end{equation}
-# This inequality is strict unless there is a single action used. That is, a mixed strategy always does worse than a strategy where there is some action such that $p_i = 1$. This means that in each state it is always strictly worse to mix messages.
 #
-# So, the only speaker strategies that can strictly maximize expected utilities send a single message per state for all states. Since mixing signals is strictly worse, only pure strategies can be components of strict Nash equilibria and thus evolutionarily stable strategies. Pure sender strategies that partition the state space into non-contiguous regions that are mapped  to the same signal receive expected utilities equivalent to some mixed strategy. Thus, only speaker strategies that partition the state space in the manner described in the text can be components of evolutionarily stable strategies.
+# Finally, by Jensen's inequality, for any concave function $E[f(a)] < f(E[a])$. Here $E[a] = \sum_i \gamma_i a_i$, thus  we have the following.
 #
+# \begin{equation}
+# 	\sum_i \gamma_i \left(1 - (a_i - t - (1-t)b)^2\right) \leq  1 - \left(\left(\sum_i \gamma_i a_i\right) - t - (1-t)b\right)^2
+# \end{equation}
+# This inequality is strict unless there is a single action used. That is, a mixed strategy always does worse than a strategy where there is some action such that $\alpha_i = 1$. This means that in each state it is always strictly worse to mix messages.
+#
+# So, the only speaker strategies that can strictly maximize expected utilities send a single message per state for all states. Since mixing signals is strictly worse, only pure strategies can be components of strict Nash equilibria and thus evolutionarily stable strategies. Thus, only speaker strategies that partition the state space in the manner described in the text can be components of evolutionarily stable strategies.
 
-# First, we import `sympy`, which is a library for symbolic math in `python`.
+# Moving on to our analysis, first, we import `sympy`, which is a library for symbolic math in `python`.
 
 # In[8]:
 
