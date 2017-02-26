@@ -37,6 +37,10 @@ python distribution. To run the Jupyter notebook, run the following in `src/`:
 
 From there you can execute commands in order.
 
+The appendix can be output to pdf using the following:
+
+    jupyter nbconvert --to pdf Ahern-Clark-SP-2017-Appendix.ipynb 
+
 The analysis can also be performed by running the following in `src/`:
 
     Rscript Ahern-Clark-SP-2017.R
