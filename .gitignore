@@ -1,9 +1,7 @@
 local/*
 cover
 data/corpus/*
-data/digs15-negative-priming
 .*.swp
-/ahern.bib
 tex/*.aux
 tex/*.log
 tex/*.blg
